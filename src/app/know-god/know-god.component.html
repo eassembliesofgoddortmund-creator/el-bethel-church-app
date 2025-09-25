@@ -1,0 +1,76 @@
+<!-- page header
+================================================== -->
+<section class="page-header page-header--know-god">
+
+  <div class="gradient-overlay"></div>
+  <div class="row page-header__content">
+    <div class="column">
+      <h1> Know God</h1>
+    </div>
+  </div>
+
+</section> <!-- end page-header -->
+
+
+<!-- page content
+================================================== -->
+<section class="page-content">
+
+  <div class="row">
+    <div class="column large-3 medium-full">
+      <div class="know-god-sidebar-card"> <div class="know-god-sidebar-header">Know God</div>
+        <ul class="know-god-menu">
+<!--          <li><a [routerLink]="['.']" [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['current']">Know God</a></li>-->
+          <li><a [routerLink]="['who-jesus']" [routerLinkActive]="['current']">Who is Jesus ?</a></li>
+          <li><a [routerLink]="['need-jesus']" [routerLinkActive]="['current']">Why do I need Jesus ?</a></li>
+          <li><a [routerLink]="['receive-jesus']" [routerLinkActive]="['current']">How do I receive Jesus ?</a></li>
+          <li><a [routerLink]="['next-steps']" [routerLinkActive]="['current']">Next Steps</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="column large-9 medium-full">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
+</section> <!-- end page content -->
+
+
+<!-- Social
+================================================== -->
+<section class="s-social">
+
+  <div class="row social-content">
+    <div class="column">
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a href="#0" title="">
+            <span class="social-list__icon social-list__icon--facebook"></span>
+            <span class="social-list__text">Facebook</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="#0" title="">
+            <span class="social-list__icon social-list__icon--twitter"></span>
+            <span class="social-list__text">Twitter</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="#0" title="">
+            <span class="social-list__icon social-list__icon--instagram"></span>
+            <span class="social-list__text">Instagram</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="#0" title="">
+            <span class="social-list__icon social-list__icon--email"></span>
+            <span class="social-list__text">Email</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div> <!-- end social-content -->
+
+</section> <!-- end s-social -->

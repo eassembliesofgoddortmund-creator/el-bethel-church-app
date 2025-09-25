@@ -1,0 +1,104 @@
+<header class="s-header">
+  <div class="header-logo">
+    <a class="site-logo" routerLink="/">
+      <img src="church_logo-modified.png" alt="Homepage" class="logo-icon">
+      <span class="logo-box">
+        <span class="logo-title">Miracle Center Church <span class="logo-hide-mobile">International e.V</span> </span>
+        <span class="logo-subtitle">Dortmund, Germany</span>
+      </span>
+    </a>
+  </div>
+
+  <nav class="header-nav-wrap" [class.is-open]="isMenuOpen">
+    <ul class="header-nav">
+      <li [class.current]="isActive('/')"><a routerLink="/" title="Home">{{'home'| translate}}</a></li>
+
+      <li
+        class="has-submenu"
+        [class.current]="isActive('/about')"
+        (mouseenter)="showAboutMenu = true"
+        (mouseleave)="showAboutMenu = false"
+      >
+        <a routerLink="/about/about-us" title="About">{{'about.main'| translate}}</a>
+        <ul class="about-submenu" [class.is-visible]="showAboutMenu">
+          <li><a routerLink="/about/about-us">{{'about.about-us'| translate}}</a></li>
+          <li><a routerLink="/about/our-pastor">{{'about.our-pastor'| translate}}</a></li>
+          <li><a routerLink="/about/faith-statement">{{'about.faith-statement'| translate }}</a></li>
+          <li><a routerLink="/about/purpose-and-mission">{{'about.our-mission'| translate}}</a></li>
+          <li><a routerLink="/about/history">{{'about.history'| translate}}</a></li>
+          <li><a routerLink="/about/church-staff">{{'about.church-staff'| translate}}</a></li>
+          <li><a routerLink="/about/supporting">{{'about.supporting-mcci'| translate}}</a></li>
+          <li><a routerLink="/about/gallery">{{'about.gallery'| translate}}</a></li>
+
+
+        </ul>
+      </li>
+
+      <li
+        class="has-submenu"
+        [class.current]="isActive('/connect')"
+        (mouseenter)="showConnectMenu = true"
+        (mouseleave)="showConnectMenu = false"
+      >
+        <a routerLink="/connect" title="Connect">{{'connect.main'| translate}}</a>
+        <ul class="connect-submenu" [class.is-visible]="showConnectMenu">
+          <li><a routerLink="/connect">{{'connect.main'| translate}}</a></li>
+          <li><a routerLink="/connect/bible-studies">{{'connect.bible-studies'| translate}}</a></li>
+          <li><a routerLink="/connect/ministries">{{'connect.ministries'| translate}}</a></li>
+          <li><a routerLink="/connect/prayer-meetings">{{'connect.prayer-meetings'| translate}}</a></li>
+          <li><a routerLink="/connect/service-teams">{{'connect.service-teams'| translate}}</a></li>
+        </ul>
+      </li>
+
+
+      <li
+        class="has-submenu"
+        [class.current]="isActive('/events')"
+        (mouseenter)="showEventMenu = true"
+        (mouseleave)="showEventMenu = false"
+      >
+        <a routerLink="/events" title="Events">{{'events.main'| translate}}</a>
+        <ul class="events-submenu" [class.is-visible]="showEventMenu">
+          <li *ngIf="isLoggedIn" ><a routerLink="/events/add-events">{{'events.add-events'| translate}}</a></li>
+          <li><a routerLink="/events/upcoming-events">{{'events.upcoming-events'| translate}}</a></li>
+          <li><a routerLink="/events/sunday-worship-service">{{'events.sunday-service'| translate}}</a></li>
+          <li><a routerLink="/events/holy-communion-service">{{'events.holy-communion'| translate}}</a></li>
+          <li><a routerLink="/events/baptism-service">{{'events.baptism-service'| translate}}</a></li>
+          <li><a routerLink="/events/midnight-prayer">{{'events.midnight-prayer'| translate}}</a></li>
+          <li><a routerLink="/events/child-dedication">{{'events.dedication'| translate}}</a></li>
+          <li><a routerLink="/events/membership-class">{{'events.membership'| translate}}</a></li>
+
+        </ul>
+      </li>
+      <li [class.current]="isActive('/donation')"><a routerLink="/donation" title="Support us">{{'support-us'| translate}}</a></li>
+      <li [class.current]="isActive('/contact')"><a routerLink="/contact" title="Contact us">{{'contact'| translate}}</a></li>
+      <li *ngIf="!isLoggedIn" [class.current]="isActive('/login')">
+        <a routerLink="/login" title="Login">Login</a>
+      </li>
+      <li *ngIf="isLoggedIn" >
+        <a style="cursor:pointer;" (click)="logout()" title="Logout">Logout</a>
+      </li>
+
+
+
+      <!--    <li class="nav-item" (click)="toggleDropdown()" >-->
+<!--      <mat-form-field>-->
+<!--        <mat-label>Select Language</mat-label>-->
+<!--        <mat-select (selectionChange)="changeLang($event.value)" [value]="lang">-->
+<!--          <mat-option *ngFor="let language of languages" [value]="language.lang">-->
+<!--            {{language.flag}}-->
+<!--            {{language.name}}-->
+<!--          </mat-option>-->
+<!--        </mat-select>-->
+<!--      </mat-form-field>-->
+
+<!--    </li>-->
+
+
+
+    </ul>
+
+  </nav>
+
+  <a class="header-menu-toggle" (click)="toggleMenu()"><span>Menu</span></a>
+</header>

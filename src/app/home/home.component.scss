@@ -1,0 +1,35 @@
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lightgallery.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css');
+body {
+  margin: 0;
+}
+.gallery-item {
+  margin: 5px;
+}
+
+
+
+
+.content_image{
+
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center (if needed) */
+  flex-wrap: wrap;         /* allow wrapping if you have many images */
+  gap: 1rem;               /* space between images */
+
+}
+
+.content_image .gallery-item img{
+  max-width: 300px; /* control thumbnail size */
+  border-radius: 8px; /* optional: rounded corners */
+
+}
+
+.photo-gallery{
+  background-color: black;
+}
+
+.text-white {
+  color: white;
+}

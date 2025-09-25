@@ -1,0 +1,11 @@
+
+  <div class="staff-container heading-margin-top ">
+    <div class="staff-card" *ngFor="let member of staffMembers">
+      <img [src]="member.photo" alt="{{ member.name }}" class="profile-pic" />
+      <h3>{{ member.name }}</h3>
+      <p class="designation">{{ member.title }}</p>
+      <a [href]="'mailto:' + member.email" class="email">{{ member.email }}</a>
+    </div>
+  </div>
+
+

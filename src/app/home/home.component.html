@@ -1,0 +1,314 @@
+
+<section class="s-hero" data-parallax="scroll" data-image-src="/church_photo_2.jpg"
+
+         data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+  <!-- Hero content from index.html -->
+
+    <div class="hero-left-bar"></div>
+
+    <div class="row hero-content">
+
+      <div class="column large-full hero-content__text">
+        <h1>{{ 'church.title' | translate }}
+
+        </h1>
+
+        <!--        <h1>-->
+<!--          We are not Just a church <br>-->
+<!--          but a family <br>-->
+<!--        </h1>-->
+        <div class="hero-content__buttons">
+          <a routerLink="/about/about-us"  class="btn btn--stroke"> {{ 'church.buttons.about' | translate }} </a>
+          <a routerLink="/events/upcoming-events"  class="btn btn--stroke"> {{ 'church.buttons.events' | translate }}</a>
+        </div>
+      </div> <!-- end hero-content__text -->
+
+    </div> <!-- end hero-content -->
+
+    <ul class="hero-social">
+      <li class="hero-social__title">Follow Us</li>
+      <li>
+        <a [href]="facebookLink" target="_blank" rel="noopener noreferrer" title="Facebook">Facebook</a>
+      </li>
+      <li>
+        <a [href]="youtubeLink" target="_blank" rel="noopener noreferrer" title="YouTube">YouTube</a>
+      </li>
+      <li>
+        <a [href]="instagramLink" target="_blank" rel="noopener noreferrer" title="Instagram">Instagram</a>
+      </li>
+    </ul> <!-- end hero-social -->
+
+    <div class="hero-scroll">
+      <a href="#about" class="scroll-link smoothscroll">
+        Scroll For More
+      </a>
+    </div> <!-- end hero-scroll -->
+
+  </section> <!-- end s-hero -->
+
+  <!-- About content from index.html -->
+  <section id="about" class="s-about">
+
+    <div class="row row-y-center about-content">
+
+      <div class="column large-half medium-full">
+        <h3 class="subhead">{{'about.welcome.subhead' | translate}}</h3>
+        <p class="lead">
+          {{'about.welcome.description' | translate}}
+
+        </p>
+        <a routerLink="/about" class="btn btn--primary btn--about">{{'about.welcome.button' | translate}}</a>
+      </div>
+
+      <div class="column large-half medium-full">
+        <ul class="about-sched">
+          <li>
+            <h4>    {{'about.schedule.main-church-service.title' | translate}} </h4>
+            <p>
+              {{'about.schedule.main-church-service.time' | translate}}
+              <br>
+              {{'about.schedule.main-church-service.location' | translate}}
+            </p>
+          </li>
+          <li>
+            <h4>      {{'about.schedule.kids-church.title' | translate}}</h4>
+            <p>
+              {{'about.schedule.kids-church.time' | translate}} <br>
+              {{'about.schedule.kids-church.location' | translate}}
+            </p>
+          </li>
+          <li>
+            <h4>  {{'about.schedule.prayer-meeting.title' | translate}}</h4>
+            <p>
+              {{'about.schedule.prayer-meeting.time' | translate}}<br>
+              {{'about.schedule.prayer-meeting.location' | translate}}
+            </p>
+          </li>
+        </ul> <!-- end about-sched-->
+      </div>
+
+    </div> <!-- end about-content -->
+
+  </section>
+
+
+
+
+<section class="s-events">
+
+  <div class="row events-header">
+    <div class="column">
+      <h2 class="subhead">{{'events.subhead' |translate}}</h2>
+    </div>
+  </div> <!-- end event-header -->
+
+  <div class="row block-large-1-2 block-900-full events-list">
+
+    <div class="column events-list__item">
+      <h3 class="display-1 events-list__item-title">
+        <a href="#0" title="">{{'events.sunday-worship.title' |translate}}</a>
+      </h3>
+      <p>
+        {{'events.sunday-worship.description' |translate}}
+      </p>
+      <ul class="events-list__meta">
+        <li class="events-list__meta-date">    {{'events.sunday-worship.meta.date' |translate}}</li>
+        <li class="events-list__meta-time">{{'events.sunday-worship.meta.time' |translate}}</li>
+        <li class="events-list__meta-location">{{'events.sunday-worship.meta.location' |translate}}</li>
+      </ul>
+    </div> <!-- end events-list__item -->
+    <div class="column events-list__item">
+      <h3 class="display-1 events-list__item-title">
+        <a href="#0" title="">{{'events.prayer-service.title' |translate}}</a>
+      </h3>
+      <p>
+        {{'events.prayer-service.description' |translate}}
+      </p>
+      <ul class="events-list__meta">
+        <li class="events-list__meta-date">  {{'events.prayer-service.meta.date' |translate}}</li>
+        <li class="events-list__meta-time">  {{'events.prayer-service.meta.time' |translate}}</li>
+        <li class="events-list__meta-location">  {{'events.prayer-service.meta.location' |translate}}</li>
+      </ul>
+    </div> <!-- end events-list__item -->
+    <div class="column events-list__item">
+      <h3 class="display-1 events-list__item-title">
+        <a href="#0" title="">{{'events.good-morning-jesus.title' |translate}}</a>
+      </h3>
+      <p>
+        {{'events.good-morning-jesus.description' |translate}}
+      </p>
+      <ul class="events-list__meta">
+        <li class="events-list__meta-date">{{'events.good-morning-jesus.meta.date' |translate}}</li>
+        <li class="events-list__meta-time">{{'events.good-morning-jesus.meta.time' |translate}}</li>
+        <li class="events-list__meta-location">{{'events.good-morning-jesus.meta.location' |translate}}</li>
+      </ul>
+    </div> <!-- end events-list__item -->
+    <div class="column events-list__item">
+      <h3 class="display-1 events-list__item-title">
+        <a href="#0" title=""> {{'events.midnight-service.title' |translate}}</a>
+      </h3>
+      <p>
+        {{'events.midnight-service.description' |translate}}
+      </p>
+      <ul class="events-list__meta">
+        <li class="events-list__meta-date">        {{'events.midnight-service.meta.date' |translate}}
+        </li>
+        <li class="events-list__meta-time">        {{'events.midnight-service.meta.time' |translate}}
+        </li>
+        <li class="events-list__meta-location">        {{'events.midnight-service.meta.location' |translate}}
+        </li>
+      </ul>
+    </div> <!-- end events-list__item -->
+
+  </div> <!-- end events-list -->
+
+</section>
+
+<section class="s-series">
+
+  <div class="series-img" style="background-image: url('../../assets/images/series-2000.jpg');"></div>
+
+  <div class="row row-y-center series-content">
+
+    <div class="column large-half medium-full">
+      <h3 class="subhead">Our Pastors</h3>
+      <h2>Pastor Mr and Mrs Prince Edos </h2>
+      <p>
+        Pastor Prince Edos and his wife came from Nigeria to Dortmund
+        because they believed God called them to start a church.
+        In 2014, they began with prayer and faith,
+        gathering people to worship and learn about Jesus.
+        What started small has grown into a family of believers where people find hope, love, and encouragement in God.
+      </p>
+    </div> <!-- end column -->
+
+    <div class="column large-half medium-full">
+      <img src="/pastor_and_wife.jpeg" alt="">
+    </div> <!-- end column -->
+
+  </div> <!-- series-content -->
+
+
+
+</section>
+
+<section class="photo-gallery">
+
+
+<div class="row row-y-center series-content content_image">
+  <h1 class="text-white">Photo Gallery</h1>
+
+
+  <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+
+
+    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"
+       data-src="/church_photo_2.jpg"
+       data-responsive="/church_photo_2.jpg"
+       data-sub-html="<h4>Photo by - Pastor Prince Edos </h4>">
+      <img class="img-responsive"
+           src="/church_photo_2_thumb_250.jpg" />
+    </a>
+    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"
+       data-src="/miracle_church_5.jpeg"
+       data-responsive="/miracle_church_5.jpeg"
+       data-sub-html="<h4>Photo by - Pastor Prince Edos </h4>">
+      <img class="img-responsive"
+           src="/miracle_church_5_250_thumbnail.jpeg" />
+    </a>
+    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"
+       data-src="/miracle_church_2.jpeg"
+       data-responsive="/miracle_church_2.jpeg"
+       data-sub-html="<h4>Photo by - Pastor Prince Edos </h4>">
+      <img class="img-responsive"
+           src="/miracle_church_2_250_thumbnail.jpeg" />
+    </a>
+    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"
+       data-src="/miracle_church_3.jpeg"
+       data-responsive="/miracle_church_3.jpeg"
+       data-sub-html="<h4>Photo by - Pastor Prince Edos </h4>">
+      <img class="img-responsive"
+           src="/miracle_church_3_250_thumbnail.jpeg" />
+    </a>
+    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"
+       data-src="/miracle_church_4.jpeg"
+       data-responsive="/miracle_church_4.jpeg"
+       data-sub-html="<h4>Photo by - Pastor Prince Edos </h4>">
+      <img class="img-responsive"
+           src="/miracle_church_4_250_thumbnail.jpeg" />
+    </a>
+
+    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"
+       data-src="/miracle_church_6.jpeg"
+       data-responsive="/miracle_church_6.jpeg"
+       data-sub-html="<h4>Photo by - Pastor Prince Edos </h4>">
+      <img class="img-responsive"
+           src="/miracle_church_6_250_thumbnail.jpeg" />
+    </a>
+
+    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"
+       data-src="/miracle_church_7.jpeg"
+       data-responsive="/miracle_church_7.jpeg"
+       data-sub-html="<h4>Photo by - Pastor Prince Edos </h4>">
+      <img class="img-responsive"
+           src="/miracle_church_7_250_thumbnail.jpeg" />
+    </a>
+
+    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"
+       data-src="/miracle_church_3.jpg"
+       data-responsive="/miracle_church_3.jpg"
+       data-sub-html="<h4>Photo by - Pastor Prince Edos </h4>">
+      <img class="img-responsive"
+           src="/miracle_center_3_250_thumbnail.jpg" />
+    </a>
+
+  </lightgallery>
+
+</div> <!-- series-content -->
+
+
+
+</section>
+
+
+
+
+
+<section class="s-social">
+
+  <div class="row social-content">
+    <div class="column">
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a [href]="facebookLink" target="_blank" rel="noopener noreferrer" title="Facebook">
+            <span class="social-list__icon social-list__icon--facebook"></span>
+            <span class="social-list__text">Facebook</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a [href]="youtubeLink" target="_blank" rel="noopener noreferrer" title="YouTube">
+            <span class="social-list__icon social-list__icon--youtube"></span>
+            <span class="social-list__text">Youtube</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a [href]="instagramLink" target="_blank" rel="noopener noreferrer" title="Instagram">
+            <span class="social-list__icon social-list__icon--instagram"></span>
+            <span class="social-list__text">Instagram</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href={{emailLink}} title="">
+            <span class="social-list__icon social-list__icon--email"></span>
+            <span class="social-list__text">Email</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div> <!-- end social-content -->
+
+</section> <!-- end s-social -->
+
+
+
+

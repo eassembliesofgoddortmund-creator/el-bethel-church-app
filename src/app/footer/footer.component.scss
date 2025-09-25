@@ -1,0 +1,31 @@
+.site-logo {
+  display: flex;
+  align-items: center; /* vertically center icon and text */
+  text-decoration: none;
+}
+
+.logo-icon {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-box {
+  color: white;
+  display: flex;
+  flex-direction: column; /* title & subtitle stacked */
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.logo-title {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.logo-subtitle {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.2;
+}

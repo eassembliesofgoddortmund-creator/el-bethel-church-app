@@ -1,0 +1,222 @@
+//.s-header{
+//  position: sticky; /* makes it stick */
+//  top: 0; /* stick to the top */
+//  z-index: 1000; /* make sure it stays above other elements */
+//  width: 100%;
+//  background-color: #000; /* add background so content doesn’t show through */
+//}
+
+.s-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #000; /* ensure text is readable */
+}
+
+.s-header a {
+  color: white;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center; /* vertically center icon and text */
+  text-decoration: none;
+}
+
+.logo-icon {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-box {
+  color: white;
+  display: flex;
+  flex-direction: column; /* title & subtitle stacked */
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.logo-title {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.logo-subtitle {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.header-nav-wrap {
+  display: none;
+}
+
+.header-nav-wrap.is-open {
+  display: block;
+}
+
+
+/* Submenu container */
+.has-submenu {
+  position: relative;
+}
+
+// ABOUT SUBMENU STYLES
+
+.about-submenu {
+  position: absolute;
+  top: 100%; /* Position below the "About" link */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 250px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: visibility 0s, opacity 0.3s, transform 0.3s;
+  z-index: 10; /* Ensure it's above other content */
+}
+
+/* Submenu when visible */
+.about-submenu.is-visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-submenu li {
+  padding: 0;
+  width: 95%;
+  border-bottom: 1px solid #eee;
+}
+
+.about-submenu li:last-child {
+  border-bottom: none;
+}
+
+.about-submenu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.about-submenu a:hover {
+  background-color: lightgrey;
+}
+
+
+// CONNECT SUBMENU STYLES
+.connect-submenu {
+  position: absolute;
+  top: 100%; /* Position below the "About" link */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 250px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: visibility 0s, opacity 0.3s, transform 0.3s;
+  z-index: 10; /* Ensure it's above other content */
+}
+
+
+/* Submenu when visible */
+.connect-submenu.is-visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.connect-submenu  li {
+  padding: 0;
+  width: 95%;
+  border-bottom: 1px solid #eee;
+}
+
+.connect-submenu  li:last-child {
+  border-bottom: none;
+}
+
+.connect-submenu  a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.connect-submenu a:hover {
+  background-color: lightgrey;
+}
+
+
+
+//Events submenu styles
+
+.events-submenu {
+  position: absolute;
+  top: 100%; /* Position below the "About" link */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 250px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: visibility 0s, opacity 0.3s, transform 0.3s;
+  z-index: 10; /* Ensure it's above other content */
+}
+
+
+/* Submenu when visible */
+.events-submenu.is-visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.events-submenu  li {
+  padding: 0;
+  width: 95%;
+  border-bottom: 1px solid #eee;
+}
+
+.events-submenu  li:last-child {
+  border-bottom: none;
+}
+
+.events-submenu  a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.events-submenu a:hover {
+  background-color: lightgrey;
+}
+
+
+.logo-hide-mobile {
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .logo-hide-mobile {
+    display: none;
+  }
+}

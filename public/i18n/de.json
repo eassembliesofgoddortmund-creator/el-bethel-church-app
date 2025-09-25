@@ -1,0 +1,155 @@
+{
+  "home": "Startseite",
+  "about": {
+    "main": "Über uns",
+    "about-us": "Über uns",
+    "our-pastor": "Unser Pastor",
+    "faith-statement": "Glaubensbekenntnis",
+    "our-mission": "Unsere Mission",
+    "history": "Geschichte",
+    "church-staff": "Kirchenpersonal",
+    "supporting-mcci": "Unterstützung von MCCI",
+    "gallery": "Galerie",
+    "welcome": {
+      "subhead": "Willkommen in unserer Kirche",
+      "description": "Willkommen in der Miracle Center Church International Dortmund, einer vom Geist erfüllten Gemeinschaft, die sich leidenschaftlich dem Lobpreis, Gebet und der Erfahrung der Kraft Gottes widmet. Wir glauben, dass derselbe Gott, der in der Bibel heilte, befreite und Wunder wirkte, auch heute noch wirkt und durch Glauben und den Heiligen Geist Heilung, Wiederherstellung und neue Hoffnung bringt.",
+      "button": "Mehr über Miracle Center"
+    },
+    "schedule": {
+      "main-church-service": {
+        "title": "Hauptgottesdienst",
+        "time": "Sonntag - 11:30 Uhr",
+        "location": "Gutenbergstraße 33, 44139 Dortmund, Deutschland"
+      },
+      "kids-church": {
+        "title": "Kinderkirche",
+        "time": "Sonntag - 11:30 Uhr",
+        "location": "Gutenbergstraße 33, 44139 Dortmund, Deutschland"
+      },
+      "prayer-meeting": {
+        "title": "Gebetstreffen",
+        "time": "Mittwoch - 18:00 bis 19:30 Uhr",
+        "location": "Gutenbergstraße 33, 44139 Dortmund, Deutschland"
+      }
+    }
+  },
+  "connect": {
+    "main": "Connect",
+    "bible-studies": "Bibelstudien",
+    "ministries": "Dienstbereiche",
+    "prayer-meetings": "Gebetstreffen",
+    "service-teams": "Serviceteams"
+  },
+  "events": {
+    "main": "Veranstaltungen",
+    "add-events": "add-events",
+    "upcoming-events": "kommende-veranstaltungen",
+    "sunday-service": "Gottesdienst am Sonntag",
+    "holy-communion": "Heilige Kommunion",
+    "baptism-service": "Taufgottesdienst",
+    "midnight-prayer": "Mitternachtsgebet",
+    "dedication": "Weihe",
+    "membership": "Mitgliedschaft",
+    "subhead": "Kommende Veranstaltungen",
+    "sunday-worship": {
+      "title": "Sonntagsgottesdienst",
+      "description": "Erleben Sie einen wunderschönen Sonntag, indem Sie Gott bei MCCI als Familie loben und anbeten. 'Anbetung', gewürzt mit der kraftvollen und unbestreitbaren Gegenwart des Heiligen Geistes und dem lebensverändernden 'Wort', ist ein wunderbarer Start in die Woche. Treffen Sie andere Mitglieder unserer Kirche und Sie werden erstaunt sein, wie sehr Sie dazugehören. Wenn Sie uns noch nie besucht haben, freuen wir uns, Sie willkommen zu heißen!",
+      "meta": {
+        "date": "Jeden Sonntag",
+        "time": "11:30 Uhr",
+        "location": "Gutenbergstraße 33, 44139 Dortmund, Deutschland"
+      }
+    },
+    "prayer-service": {
+      "title": "Gebetsgottesdienst",
+      "description": "Erleben Sie die Kraft des Gebets bei unserem Gebetsgottesdienst bei MCCI. Als Familie kommen wir zusammen, um unsere Herzen zu Gott zu erheben und darauf zu vertrauen, dass Er in unserem Leben wirkt. In dieser vom Geist erfüllten Atmosphäre wird Frieden wiederhergestellt, Lasten werden gehoben und Kraft erneuert. Gebet zieht uns nicht nur näher zu Gott, sondern auch zueinander. Ob zum ersten Mal oder schon bekannt, wir heißen Sie herzlich willkommen, um zu sehen, wie Gebet Ihr Leben verändern kann!",
+      "meta": {
+        "date": "Jeden Freitag",
+        "time": "18:00 - 20:00 Uhr",
+        "location": "Gutenbergstraße 33, 44139 Dortmund, Deutschland"
+      }
+    },
+    "good-morning-jesus": {
+      "title": "Guten Morgen Jesus",
+      "description": "Beginnen Sie Ihren Samstag schön mit Guten Morgen Jesus bei MCCI. Kommen Sie als Familie zusammen, um den Herrn durch herzliches Gebet, erhebenden Lobpreis und das lebensspendende Wort zu begrüßen. Erfüllt von der Gegenwart des Heiligen Geistes bringen die Morgenstunden mit Jesus Frieden, Freude und erneuerte Kraft für die kommende Woche. Treffen Sie andere Mitglieder unserer Kirche, Sie werden erstaunt sein, wie sehr Sie dazugehören. Wenn es Ihr erstes Mal ist, heißen wir Sie herzlich willkommen!",
+      "meta": {
+        "date": "Jeden Samstag",
+        "time": "9:00 - 10:00 Uhr",
+        "location": "Gutenbergstraße 33, 44139 Dortmund, Deutschland"
+      }
+    },
+    "midnight-service": {
+      "title": "Mitternachtsgottesdienst",
+      "description": "Erleben Sie eine kraftvolle Begegnung mit Gott bei unserem Mitternachtsgottesdienst bei MCCI, der am letzten Freitag jedes Monats stattfindet. Kommen Sie als Familie zusammen für Lobpreis, Gebet und das lebensverändernde Wort in der Gegenwart des Heiligen Geistes. Diese heilige Zeit ist perfekt für Reflexion, Erneuerung und Durchbrüche. Treffen Sie andere Mitglieder unserer Kirche und Sie werden erstaunt sein, wie sehr Sie dazugehören. Wenn es Ihr erstes Mal ist, heißen wir Sie herzlich willkommen!",
+      "meta": {
+        "date": "Letzter Freitag des Monats",
+        "time": "22:00 - 02:00 Uhr",
+        "location": "Gutenbergstraße 33, 44139 Dortmund, Deutschland"
+      }
+    }
+  },
+  "support-us": "Unterstützen Sie uns",
+  "contact": "Kontakt",
+  "church": {
+    "title": "Wir sind nicht nur eine Kirche, sondern eine Familie",
+    "buttons": {
+      "about": "Über uns",
+      "events": "Veranstaltungen"
+    },
+    "social": {
+      "title": "Folgen Sie uns",
+      "facebook": "Facebook",
+      "youtube": "YouTube",
+      "instagram": "Instagram"
+    },
+    "scroll": "Scrollen Sie für mehr"
+  },
+  "series": {
+    "subhead": "Aktuelle Serie",
+    "title": "Gestalte dein Leben mit dem Wort des Lebens",
+    "description": "Aut sed amet et quis aliquid laborum minus consequatur. Animi repellendus quas. Est voluptates minima ut dolorum aliquid sint. Ratione et et molestias rerum quibusdam. Deserunt suscipit ut expedita. Non numquam aut eum perferendis molestiae praesentium aliquid voluptatum numquam dolorum aliquid sint minima.",
+    "buttons": {
+      "watch-video": "Video ansehen",
+      "listen-message": "Nachricht anhören"
+    },
+    "subscribe": {
+      "text": "Verpassen Sie keine Nachricht. Abonnieren Sie unsere YouTube- und Podcast-Kanäle.",
+      "links": {
+        "apple-podcast": "Apple Podcast",
+        "spotify": "Spotify",
+        "soundcloud": "SoundCloud",
+        "youtube": "YouTube"
+      }
+    }
+  },
+  "social": {
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "instagram": "Instagram",
+    "email": "E-Mail"
+  },
+  "footer": {
+    "logo": {
+      "title": "Miracle Center Church International e.V",
+      "subtitle": "Dortmund, Deutschland"
+    },
+    "description": "MCCI ist eine Kirche, die an Jesus glaubt, eine Kirche, die Gott und Menschen liebt.",
+    "location": {
+      "title": "Unser Standort",
+      "address": "Gutenbergstraße 33, 44139 Dortmund, Deutschland",
+      "button": "Route anzeigen"
+    },
+    "quick-links": {
+      "title": "Schnellzugriffe",
+      "links": {
+        "home": "Startseite",
+        "about": "Über uns",
+        "events": "Veranstaltungen",
+        "support-us": "Unterstützen Sie uns",
+        "contact": "Kontakt"
+      }
+    },
+    "copyright": "Design von Ronney",
+    "back-to-top": "Nach oben"
+  }
+}
