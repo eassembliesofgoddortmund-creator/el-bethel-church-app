@@ -16,39 +16,40 @@ export class ChurchStaffComponent {
       name: 'Rev Pastor Fredrick',
       title: 'Senior Pastor',
       email: 'fredrick@_____.com',
-      photo: 'pastor_fredrick.png'
-    },
-    {
-      name: 'Rev Pastor Fredrick',
-      title: 'Senior Pastor',
-      email: 'fredrick@_____.com',
-      photo: 'pastor_fredrick.png'
-    },
-    {
-      name: 'Rev Pastor Fredrick',
-      title: 'Senior Pastor',
-      email: 'fredrick@_____.com',
-      photo: 'pastor_fredrick.png'
-    },
-    {
-      name: 'Rev Pastor Fredrick',
-      title: 'Senior Pastor',
-      email: 'fredrick@_____.com',
-      photo: 'pastor_fredrick.png'
-    },
-    {
-      name: 'Rev Pastor Fredrick',
-      title: 'Senior Pastor',
-      email: 'fredrick@_____.com',
-      photo: 'pastor_fredrick.png'
-    },
-    {
-      name: 'Rev Pastor Fredrick',
-      title: 'Senior Pastor',
-      email: 'fredrick@_____.com',
-      photo: 'pastor_fredrick.png'
+      photo: 'fredric_staff_member.png'
     },
 
+    {
+      name: 'Rev Pastor Fredrick',
+      title: 'Senior Pastor',
+      email: 'fredrick@_____.com',
+      photo: 'fredric_staff_member.png'
+    },
+
+    {
+      name: 'Rev Pastor Fredrick',
+      title: 'Senior Pastor',
+      email: 'fredrick@_____.com',
+      photo: 'fredric_staff_member.png'
+    },
+    {
+      name: 'Rev Pastor Fredrick',
+      title: 'Senior Pastor',
+      email: 'fredrick@_____.com',
+      photo: 'fredric_staff_member.png'
+    },
+    {
+      name: 'Rev Pastor Fredrick',
+      title: 'Senior Pastor',
+      email: 'fredrick@_____.com',
+      photo: 'fredric_staff_member.png'
+    },
+    {
+      name: 'Rev Pastor Fredrick',
+      title: 'Senior Pastor',
+      email: 'fredrick@_____.com',
+      photo: 'fredric_staff_member.png'
+    },
 
 
   ];
