@@ -23,7 +23,10 @@ import {MatIconModule} from '@angular/material/icon';
 export class DonationComponent {
   readonly panelOpenState = signal(false);
  // bankdetails = environment.bankDetails;
-
+  youtubeLink =""
+  facebookLink = "https://www.facebook.com/p/Dortmund-Assemblies-100071161759271/";
+  instagramLink ="https://www.instagram.com/Dortmund%20Assemblies"
+  emailLink ="";
 
 
 }

@@ -23,6 +23,10 @@ export class EventsComponent implements  OnInit{
 
   isLoggedIn = false;
 
+  youtubeLink =""
+  facebookLink = "https://www.facebook.com/p/Dortmund-Assemblies-100071161759271/";
+  instagramLink ="https://www.instagram.com/Dortmund%20Assemblies"
+  emailLink ="";
 
   events: Event[] = [
     {
