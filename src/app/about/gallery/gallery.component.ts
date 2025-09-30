@@ -15,11 +15,15 @@ export class GalleryComponent implements OnInit{
   ngOnInit() {
     // Set items array
     const imagePaths = [
-      'church_photo_2.jpg',
-      'church_photo_3.jpg',
-      'miracle_church_10.jpeg',
-      'miracle_church_11.jpeg',
-      'pastor-04.jpg'
+      'bethel_4.jpg',
+      'bethel_1.jpg',
+      'bethel_5.jpg',
+      'bethel_3.jpg',
+      'bethel_6.jpg',
+      'bethel_7.jpg',
+      'bethel_8.jpg',
+      'bethel_9.jpg'
+
     ];
 
     this.images = imagePaths.map(path => new ImageItem({ src: path, thumb: path }));

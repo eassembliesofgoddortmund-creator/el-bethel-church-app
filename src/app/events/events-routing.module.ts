@@ -11,6 +11,7 @@ import {MembershipClassComponent} from './membership-class/membership-class.comp
 import {ConnectGroupComponent} from '../connect-group/connect-group.component';
 import {UpcomingEventsComponent} from './upcoming-events/upcoming-events.component';
 import {AddEventsComponent} from './add-events/add-events.component';
+import {UpdateUpcomingEventCardComponent} from './update-upcoming-event-card/update-upcoming-event-card.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
       {path:'child-dedication',component: ChildDedicationComponent},
       {path:'membership-class',component: MembershipClassComponent},
       {path:'upcoming-events',component: UpcomingEventsComponent},
+      {path:'update-upcoming-events/:id',component: UpdateUpcomingEventCardComponent},
       {path:'add-events',component: AddEventsComponent}
 
 

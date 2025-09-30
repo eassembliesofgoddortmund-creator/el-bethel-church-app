@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 })
 export class PrivacyPolicyComponent {
 
-  churchName: string = 'Miracle Center Church International e.V Dortmund';
-  contactEmail: string = 'edoprince2000@yahoo.com';
-  contactAddress: string = 'Gutenbergstraße 33, 44139 Dortmund, Germany';
-  dataProtectionOfficer: string = 'Rev Pastor Prince Edos';
-  dpoEmail: string = 'edoprince2000@yahoo.com';
+  churchName: string = 'El Bethel AG e.V Dortmund';
+  contactEmail: string = 'fredrick@yahoo.com';
+  contactAddress: string = 'Hannöversche Str. 22A, 44143 Dortmund';
+  dataProtectionOfficer: string = 'Rev Fredrick';
+  dpoEmail: string = 'fredrick@yahoo.com';
 
 }

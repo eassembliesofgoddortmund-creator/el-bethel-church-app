@@ -1,15 +1,4 @@
 import {inject, Injectable} from '@angular/core';
-import {
-  Firestore,
-  collection,
-  collectionData,
-  addDoc,
-  doc,
-  updateDoc,
-  deleteDoc,
-  getDoc, setDoc, docData
-} from '@angular/fire/firestore';
-import { Storage, ref, uploadBytes, getDownloadURL } from '@angular/fire/storage';
 import {EventsModel} from '../models/Events.model';
 import {BehaviorSubject, from, Observable, of, switchMap} from 'rxjs';
 
@@ -38,6 +27,8 @@ export class EventService {
     // Push the new array to the BehaviorSubject
     this.eventsSubject.next(updatedEvents);
   }
+
+
 
 
 

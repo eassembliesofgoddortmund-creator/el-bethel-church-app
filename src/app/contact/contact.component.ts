@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
-  email ="edoprince2000@yahoo.com";
-  phone1="+49-015776393379";
-  phone2 ="+49-015211404118"
+  email ="fredrick@yahoo.com";
+  phone1="+49-1785302417";
+  phone2="+49-1775650008"
 
 }

@@ -31,7 +31,7 @@ export class AddEventsComponent implements OnInit {
   selectedFile?: File;
   previewUrl: string | ArrayBuffer | null = null;
 
-  events: EventsModel = { title: '', description: '', flyer: '' };
+  events: EventsModel = { id:'',title: '', description: '', flyer: '' };
   flyer:string ="";
   events$: Observable<EventsModel[]> | undefined;
   newId: number = 0;

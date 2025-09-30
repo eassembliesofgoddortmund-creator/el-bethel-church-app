@@ -32,9 +32,19 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "@angular/material/prebuilt-themes/azure-blue.css",
+              "src/styles.scss",
+              "src/assets/css/base.css",
+              "src/assets/css/main.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/jquery-3.2.1.min.js",
+              "src/assets/js/plugins.js",
+              "src/assets/js/main.js",
+              "src/assets/js/modernizr.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -98,5 +108,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

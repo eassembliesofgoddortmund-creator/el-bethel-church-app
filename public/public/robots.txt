@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://miracle-center-dortmund.vercel.app/sitemap.xml

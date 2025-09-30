@@ -125,7 +125,7 @@ body {
  * ## links
  * ------------------------------------------------------------------- */
 a {
-  color: #3b0d11;
+  color: #01579B;
   transition: all 0.3s ease-in-out;
 }
 
@@ -447,7 +447,7 @@ ul.disc li::before {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #3b0d11;
+  background: #01579B;
   position: absolute;
   left: -16px;
   top: 11px;
@@ -456,7 +456,7 @@ ul.disc li::before {
 
 dt {
   margin: 0;
-  color: #3b0d11;
+  color: #01579B;
 }
 
 dd {
@@ -940,7 +940,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #3b0d11;
+  -webkit-text-fill-color: #01579B;
   transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -999,8 +999,8 @@ button.btn--primary,
 input[type="submit"].btn--primary,
 input[type="reset"].btn--primary,
 input[type="button"].btn--primary {
-  background: #3b0d11;
-  border-color: #3b0d11;
+  background: #01579B;
+  border-color: #01579B;
   color: #ffffff;
 }
 
@@ -1219,7 +1219,7 @@ input::-moz-focus-inner {
 }
 
 .stats-tabs li a:hover {
-  color: #3b0d11;
+  color: #01579B;
 }
 
 .stats-tabs li a em {
@@ -1631,8 +1631,8 @@ input::-moz-focus-inner {
 
 .events-list__item-title a:hover,
 .events-list__item-title a:focus {
-  color: #3b0d11;
-  border-bottom: 1px solid #3b0d11;
+  color: #01579B;
+  border-bottom: 1px solid #01579B;
 }
 
 .events-list__meta {
@@ -1720,7 +1720,7 @@ input::-moz-focus-inner {
   font-weight: 700;
   text-align: center;
   color: #ffffff;
-  background-color: #3b0d11;
+  background-color: #01579B;
   height: 4.8rem;
   width: 4.8rem;
   line-height: 4.8rem;
@@ -2131,7 +2131,7 @@ input::-moz-focus-inner {
   content: "";
   height: 2px;
   width: 10rem;
-  background-color: #7d1c24;
+  background-color: #01579B;
   position: absolute;
   top: 0;
   left: .8rem;
@@ -2521,12 +2521,12 @@ html.no-csstransitions .hero-content {
 .s-about {
   padding-top: 19.6rem;
   padding-bottom: 19.6rem;
-  background-color: #3b0d11;
+  background-color: #01579B;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .s-about .subhead {
-  color: #fb8b23;
+  color: #E5E009;
   margin-bottom: 4rem;
 }
 
@@ -2539,8 +2539,12 @@ html.no-csstransitions .hero-content {
   display: block;
   width: 100%;
   margin-right: 0;
-  background-color: #21070a;
-  border-color: #21070a;
+  background-color: #1A237E
+
+;
+  border-color: #1A237E
+
+;
 }
 
 /* -------------------------------------------------------------------
@@ -3138,7 +3142,9 @@ html.no-csstransitions .hero-content {
 .s-footer {
   padding-top: 12rem;
   padding-bottom: 8rem;
-  background-color: #3b0d11;
+  background-color: #01579B
+
+;
   font-family: "Open Sans", sans-serif;
   font-size: 1.7rem;
   line-height: 1.882;
@@ -3156,8 +3162,8 @@ html.no-csstransitions .hero-content {
 }
 
 .s-footer .btn--footer {
-  border-color: #21070a;
-  background-color: #21070a;
+  border-color:#1A237E;
+  background-color: #1A237E;
   padding: 0 4rem;
 }
 
@@ -3385,13 +3391,17 @@ html.no-csstransitions .hero-content {
 }
 
 .page-header--about {
-  /*background-image: url(../images/header-bgs/about-header-bg-2000.jpg);*/
-  background-image: url(../images/header-bgs/new_about_miracle_center_2.jpg);
+  background-image: url(../images/header-bgs/worship.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .page-header--contact {
-  /*background-image: url(../images/header-bgs/contact-header-bg-2000.jpg);*/
-  background-image: url(../images/header-bgs/new-contact-bg.jpg);
+  background-image: url(../images/header-bgs/bethel_4.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
 
@@ -3400,17 +3410,19 @@ html.no-csstransitions .hero-content {
 }
 
 .page-header--events {
-  background-image: url(../images/header-bgs/events-header-bg-2000.jpg);
+  background-image: url(../images/header-bgs/children.jpg);
+
 }
 .page-header--donation {
-  background-image: url(../images/header-bgs/miracle_center_6.jpg);
-  background-position: center top; /* moves image down */
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url(../images/header-bgs/children_2.jpg);
+
 }
 
 .page-header--connect {
-  background-image: url(../images/header-bgs/connect-header-bg-2000.jpg);
+  background-image: url(../images/header-bgs/connect.jpg);
+  background-position: center top; /* moves image down */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .page-header--volunteer {
@@ -3535,7 +3547,7 @@ html.no-csstransitions .hero-content {
 .event-meta strong {
   font-family: "Open Sans", sans-serif;
   margin-right: 1.2rem;
-  color: #3b0d11;
+  color: #01579B;
 }
 
 .event-meta strong::after {
