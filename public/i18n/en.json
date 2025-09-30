@@ -21,14 +21,14 @@
         "time": "Sunday - 11:30 AM",
         "location": "Hannöversche Str. 22A, 44143 Dortmund, Germany"
       },
-      "kids-church": {
-        "title": "Kids Church",
-        "time": "Sunday - 11:30 AM",
+      "bible-studies": {
+        "title": "Bible Studies",
+        "time": "Wednesday - 7:00 PM - 8:30 PM",
         "location": "Hannöversche Str. 22A, 44143 Dortmund"
       },
       "prayer-meeting": {
         "title": "Prayer Meeting",
-        "time": "Wednesday - 6:00 PM to 7:30 PM",
+        "time": "Friday - 7:00 PM to 8:30 PM",
         "location": "Hannöversche Str. 22A, 44143 Dortmund"
       }
     }
