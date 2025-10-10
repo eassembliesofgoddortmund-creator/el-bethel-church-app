@@ -100,14 +100,46 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   color: #fff;
+  font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  display: grid;           /* <-- ensures perfect centering */
+  place-items: center;     /* <-- ensures perfect centering */
+  padding: 0;              /* <-- prevents padding from breaking the circle */
+  min-width: 0;            /* <-- avoids stretching on mobile */
 }
 
 .arrows button:hover {
   background: #fff;
   color: #000;
+}
+
+/* === MOBILE RESPONSIVE === */
+@media (max-width: 768px) {
+  .arrows {
+    gap: 10px;
+    bottom: 15px;
+  }
+
+  .arrows button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .arrows {
+    gap: 8px;
+    bottom: 10px;
+  }
+
+  .arrows button {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
 }
 
 /* === THUMBNAILS === */
