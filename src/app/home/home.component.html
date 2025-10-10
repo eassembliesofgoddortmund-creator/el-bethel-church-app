@@ -1,50 +1,55 @@
+<div id="preloader" *ngIf="showPreloader">
+  <div id="loader" class="dots-jump">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
 
-<section class="s-hero" data-parallax="scroll" data-image-src="/church-3000.jpg"
 
-         data-natural-width=3000 data-natural-height=2000 data-position-y=center>
-  <!-- Hero content from index.html -->
+<div class="carousel">
+  <!-- Slide Items -->
+  <div class="carousel">
+    <div class="list" [@carouselFade]="currentIndex">
+      <div class="item" *ngFor="let slide of slides; let i = index" [class.active]="i === currentIndex">
+        <div class="item-inner">
+          <div class="content">
+            <div class="author">{{slide.author}}</div>
+            <div style="font-family: 'waterfall', cursive" class="title">{{slide.title}}</div>
+            <div class="topic">{{slide.topic}}</div>
+            <div class="des">{{slide.des}}</div>
 
-    <div class="hero-left-bar"></div>
+          </div>
+          <img [src]="slide.img" [alt]="slide.title" />
 
-    <div class="row hero-content">
-
-      <div class="column large-full hero-content__text">
-        <h1>{{ 'church.title' | translate }}
-
-        </h1>
-
-        <!--        <h1>-->
-<!--          We are not Just a church <br>-->
-<!--          but a family <br>-->
-<!--        </h1>-->
-        <div class="hero-content__buttons">
-          <a routerLink="/about/about-us"  class="btn btn--stroke"> {{ 'church.buttons.about' | translate }} </a>
-          <a routerLink="/events/upcoming-events"  class="btn btn--stroke"> {{ 'church.buttons.events' | translate }}</a>
         </div>
-      </div> <!-- end hero-content__text -->
+      </div>
+    </div>
+    <!-- Thumbnails -->
+    <div class="thumbnail">
+      <div
+        class="item"
+        *ngFor="let slide of slides; let i = index"
+        [class.active]="i === currentIndex"
+        (click)="goToSlide(i)"
+      >
+        <img [src]="slide.img" [alt]="slide.title" />
+      </div>
+    </div>
+  </div>
 
-    </div> <!-- end hero-content -->
 
-    <ul class="hero-social">
-      <li class="hero-social__title">Follow Us</li>
-      <li>
-        <a [href]="facebookLink" target="_blank" rel="noopener noreferrer" title="Facebook">Facebook</a>
-      </li>
-      <li>
-        <a [href]="youtubeLink" target="_blank" rel="noopener noreferrer" title="YouTube">YouTube</a>
-      </li>
-      <li>
-        <a [href]="instagramLink" target="_blank" rel="noopener noreferrer" title="Instagram">Instagram</a>
-      </li>
-    </ul> <!-- end hero-social -->
 
-    <div class="hero-scroll">
-      <a href="#about" class="scroll-link smoothscroll">
-        Scroll For More
-      </a>
-    </div> <!-- end hero-scroll -->
+  <!-- Arrows -->
+  <div class="arrows">
+    <button  (click)="prevSlide()" >&lt;</button>
+    <button (click)="nextSlide()" id="next">&gt;</button>
+  </div>
 
-  </section> <!-- end s-hero -->
+
+</div>
+
+
 
   <!-- About content from index.html -->
   <section id="about" class="s-about">
@@ -57,7 +62,7 @@
           {{'about.welcome.description' | translate}}
 
         </p>
-        <a routerLink="/about" class="btn btn--primary btn--about">{{'about.welcome.button' | translate}}</a>
+        <a (click)="togglePreloader()"  class="btn btn--primary btn--about">{{'about.welcome.button' | translate}}</a>
       </div>
 
       <div class="column large-half medium-full">
@@ -132,15 +137,15 @@
     </div> <!-- end events-list__item -->
     <div class="column events-list__item">
       <h3 class="display-1 events-list__item-title">
-        <a href="#0" title="">{{'events.good-morning-jesus.title' |translate}}</a>
+        <a href="#0" title="">{{'events.bible-studies.title' |translate}}</a>
       </h3>
       <p>
-        {{'events.good-morning-jesus.description' |translate}}
+        {{'events.bible-studies.description' |translate}}
       </p>
       <ul class="events-list__meta">
-        <li class="events-list__meta-date">{{'events.good-morning-jesus.meta.date' |translate}}</li>
-        <li class="events-list__meta-time">{{'events.good-morning-jesus.meta.time' |translate}}</li>
-        <li class="events-list__meta-location">{{'events.good-morning-jesus.meta.location' |translate}}</li>
+        <li class="events-list__meta-date">{{'events.bible-studies.meta.date' |translate}}</li>
+        <li class="events-list__meta-time">{{'events.bible-studies.meta.time' |translate}}</li>
+        <li class="events-list__meta-location">{{'events.bible-studies.meta.location' |translate}}</li>
       </ul>
     </div> <!-- end events-list__item -->
     <div class="column events-list__item">
@@ -164,107 +169,85 @@
 
 </section>
 
-<section class="s-series">
-
-  <div class="series-img" style="background-image: url('../../assets/images/series-2000.jpg');"></div>
-
-  <div class="row row-y-center series-content">
-
-    <div class="column large-half medium-full">
-      <h3 class="subhead">Our Pastors</h3>
-      <h2>Pastor Gredrick G Nimako </h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam asperiores commodi cumque ipsam iure magni maxime nam necessitatibus velit? Aliquam architecto autem cum fuga nemo ut vitae? Asperiores, ipsum?
-      </p>
-    </div> <!-- end column -->
-
-    <div class="column large-half medium-full">
-      <img src="/pastor_fredrick.png" alt="">
-    </div> <!-- end column -->
-
-  </div> <!-- series-content -->
 
 
 
-</section>
 
-<section class="photo-gallery">
-
-
-<div class="row row-y-center series-content content_image">
-  <h1 class="text-white">Photo Gallery</h1>
+<!--<section class="photo-gallery">-->
 
 
-  <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+<!--<div class="row row-y-center series-content content_image">-->
+<!--  <h1 class="text-white">Photo Gallery</h1>-->
 
 
-    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"
-       data-src="/bethel_9.jpg"
-       data-responsive="/bethel_9.jpg"
-       data-sub-html="<h4>Photo by - Pastor Fredrick  </h4>">
-      <img class="img-responsive"
-           src="/bethel_9_thumbnail_250.jpg" />
-    </a>
-    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"
-       data-src="/bethel_2.jpg"
-       data-responsive="/bethel_2.jpg"
-       data-sub-html="<h4>Photo by - Pastor Fredrick  </h4>">
-      <img class="img-responsive"
-           src="/bethel_2_thumbnail_250.jpg" />
-    </a>
-    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"
-       data-src="/bethel_3.jpg"
-       data-responsive="/bethel_3.jpg"
-       data-sub-html="<h4>Photo by - Pastor Fredrick  </h4>">
-      <img class="img-responsive"
-           src="/bethel_3_thumbnail_250.jpg" />
-    </a>
-    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"
-       data-src="/bethel_4.jpg"
-       data-responsive="/bethel_4.jpg"
-       data-sub-html="<h4>Photo by - Pastor Fredrick  </h4>">
-      <img class="img-responsive"
-           src="/bethel_4_thumbnail_250.jpg" />
-    </a>
-    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"
-       data-src="/bethel_4.jpg"
-       data-responsive="/bethel_4.jpg"
-       data-sub-html="<h4>Photo by - Pastor Fredrick  </h4>">
-      <img class="img-responsive"
-           src="/bethel_4_thumbnail_250.jpg" />
-    </a>
-    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"
-       data-src="/bethel_6.jpg"
-       data-responsive="/bethel_6.jpg"
-       data-sub-html="<h4>Photo by - Pastor Fredrick  </h4>">
-      <img class="img-responsive"
-           src="/bethel_6_thumbnail_250.jpg" />
-    </a>
-    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"
-       data-src="/bethel_7.jpg"
-       data-responsive="/bethel_7.jpg"
-       data-sub-html="<h4>Photo by - Pastor Fredrick  </h4>">
-      <img class="img-responsive"
-           src="/bethel_7_thumbnail_250.jpg" />
-    </a>
-    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"
-       data-src="/bethel_9.jpg"
-       data-responsive="/bethel_9.jpg"
-       data-sub-html="<h4>Photo by - Pastor Fredrick  </h4>">
-      <img class="img-responsive"
-           src="/bethel_9_thumbnail_250.jpg" />
-    </a>
+<!--  <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">-->
 
 
-  </lightgallery>
+<!--    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"-->
+<!--       data-src="/bethel_9.jpg"-->
+<!--       data-responsive="/bethel_9.jpg"-->
+<!--       data-sub-html="<h4>Photo by - Pastor Fredrick  </h4>">-->
+<!--      <img class="img-responsive"-->
+<!--           src="/bethel_9_thumbnail_250.jpg" />-->
+<!--    </a>-->
+<!--    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"-->
+<!--       data-src="/bethel_2.jpg"-->
+<!--       data-responsive="/bethel_2.jpg"-->
+<!--       data-sub-html="<h4>Photo by - Pastor Fredrick  </h4>">-->
+<!--      <img class="img-responsive"-->
+<!--           src="/bethel_2_thumbnail_250.jpg" />-->
+<!--    </a>-->
+<!--    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"-->
+<!--       data-src="/bethel_3.jpg"-->
+<!--       data-responsive="/bethel_3.jpg"-->
+<!--       data-sub-html="<h4>Photo by - Pastor Fredrick  </h4>">-->
+<!--      <img class="img-responsive"-->
+<!--           src="/bethel_3_thumbnail_250.jpg" />-->
+<!--    </a>-->
+<!--    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"-->
+<!--       data-src="/bethel_4.jpg"-->
+<!--       data-responsive="/bethel_4.jpg"-->
+<!--       data-sub-html="<h4>Photo by - Pastor Fredrick  </h4>">-->
+<!--      <img class="img-responsive"-->
+<!--           src="/bethel_4_thumbnail_250.jpg" />-->
+<!--    </a>-->
+<!--    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"-->
+<!--       data-src="/bethel_4.jpg"-->
+<!--       data-responsive="/bethel_4.jpg"-->
+<!--       data-sub-html="<h4>Photo by - Pastor Fredrick  </h4>">-->
+<!--      <img class="img-responsive"-->
+<!--           src="/bethel_4_thumbnail_250.jpg" />-->
+<!--    </a>-->
+<!--    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"-->
+<!--       data-src="/bethel_6.jpg"-->
+<!--       data-responsive="/bethel_6.jpg"-->
+<!--       data-sub-html="<h4>Photo by - Pastor Fredrick  </h4>">-->
+<!--      <img class="img-responsive"-->
+<!--           src="/bethel_6_thumbnail_250.jpg" />-->
+<!--    </a>-->
+<!--    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"-->
+<!--       data-src="/bethel_7.jpg"-->
+<!--       data-responsive="/bethel_7.jpg"-->
+<!--       data-sub-html="<h4>Photo by - Pastor Fredrick  </h4>">-->
+<!--      <img class="img-responsive"-->
+<!--           src="/bethel_7_thumbnail_250.jpg" />-->
+<!--    </a>-->
+<!--    <a data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"-->
+<!--       data-src="/bethel_9.jpg"-->
+<!--       data-responsive="/bethel_9.jpg"-->
+<!--       data-sub-html="<h4>Photo by - Pastor Fredrick  </h4>">-->
+<!--      <img class="img-responsive"-->
+<!--           src="/bethel_9_thumbnail_250.jpg" />-->
+<!--    </a>-->
 
-</div> <!-- series-content -->
+
+<!--  </lightgallery>-->
+
+<!--</div> &lt;!&ndash; series-content &ndash;&gt;-->
 
 
 
-</section>
-
-
+<!--</section>-->
 
 
 
@@ -302,7 +285,29 @@
     </div>
   </div> <!-- end social-content -->
 
+
+
+
 </section> <!-- end s-social -->
+
+<section class="s-events">
+  <div class="row events-header">
+    <div class="column">
+      <h1 >Gallery</h1>
+    </div>
+  </div> <!-- end event-header -->
+  <app-home-gallery/>
+</section>
+
+
+<!--<section class="s-events">-->
+<!--  <div class="row events-header">-->
+<!--    <div class="column">-->
+<!--      <h1 >Connect With Us</h1>-->
+<!--    </div>-->
+<!--  </div> &lt;!&ndash; end event-header &ndash;&gt;-->
+<!--  <app-connect-with-us></app-connect-with-us>-->
+<!--</section>-->
 
 
 

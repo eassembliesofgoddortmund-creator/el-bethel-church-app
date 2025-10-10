@@ -2521,17 +2521,17 @@ html.no-csstransitions .hero-content {
 .s-about {
   padding-top: 19.6rem;
   padding-bottom: 19.6rem;
-  background-color: #01579B;
-  color: rgba(255, 255, 255, 0.8);
+  background-color: white;
+  color: black;
 }
 
 .s-about .subhead {
-  color: #E5E009;
+  color: #5c724a;
   margin-bottom: 4rem;
 }
 
 .s-about .lead {
-  color: #ffffff;
+  color: black;
   margin-bottom: 4rem;
 }
 
@@ -2539,10 +2539,9 @@ html.no-csstransitions .hero-content {
   display: block;
   width: 100%;
   margin-right: 0;
-  background-color: #1A237E
-
+  background-color: #5c724a
 ;
-  border-color: #1A237E
+  border-color: #5c724a
 
 ;
 }
@@ -3142,7 +3141,7 @@ html.no-csstransitions .hero-content {
 .s-footer {
   padding-top: 12rem;
   padding-bottom: 8rem;
-  background-color: #01579B
+  background-color: black;
 
 ;
   font-family: "Open Sans", sans-serif;
@@ -3162,8 +3161,8 @@ html.no-csstransitions .hero-content {
 }
 
 .s-footer .btn--footer {
-  border-color:#1A237E;
-  background-color: #1A237E;
+  border-color:#5c724a;
+  background-color: #5c724a;
   padding: 0 4rem;
 }
 
@@ -3406,7 +3405,8 @@ html.no-csstransitions .hero-content {
 }
 
 .page-header--know-god {
-  background-image: url(../images/header-bgs/jesus_second_coming.jpg);
+  background-image: url(../images/header-bgs/jesus_children.jpg);
+  margin-top: 70px;
 }
 
 .page-header--events {

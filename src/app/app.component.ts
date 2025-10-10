@@ -6,12 +6,14 @@ import {FooterComponent} from './footer/footer.component';
 import {FloatingButtonComponent} from './floating-button/floating-button.component';
 import {CookiesConsentComponent} from './cookies-consent/cookies-consent.component';
 import {AngularFireModule} from '@angular/fire/compat';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, HeaderComponent,
     FooterComponent,
+    CommonModule,
     TranslateModule,
     AngularFireModule,
     FloatingButtonComponent,
@@ -21,6 +23,7 @@ import {AngularFireModule} from '@angular/fire/compat';
 })
 export class AppComponent {
   title = 'el-bethel-ag-church';
+  showPreloader = false;
 
   constructor(private  translateService: TranslateService) {
 
@@ -28,5 +31,17 @@ export class AppComponent {
     this.translateService.use(localStorage.getItem('lang') || 'en')
     this.translateService.setFallbackLang('en');
 
+  }
+
+  togglePreloader() {
+    this.showPreloader = !this.showPreloader;
+  }
+
+  showLoader() {
+    this.showPreloader = true;
+  }
+
+  hideLoader() {
+    this.showPreloader = false;
   }
 }

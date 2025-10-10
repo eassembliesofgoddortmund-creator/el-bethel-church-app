@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {CommonModule, Location} from '@angular/common';
 import {Router, RouterModule} from '@angular/router';
 import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
@@ -17,6 +17,13 @@ import {AuthService} from '../services/auth.service';
 })
 
 export class HeaderComponent implements OnInit{
+
+  isScrolled = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 50; // change color after 50px scroll
+  }
 
   languages: Language[] = [
     { lang: 'en', name: 'English', flag: '🇬🇧',  value: 'en', },

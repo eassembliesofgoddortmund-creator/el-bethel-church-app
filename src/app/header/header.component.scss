@@ -1,10 +1,4 @@
-//.s-header{
-//  position: sticky; /* makes it stick */
-//  top: 0; /* stick to the top */
-//  z-index: 1000; /* make sure it stays above other elements */
-//  width: 100%;
-//  background-color: #000; /* add background so content doesn’t show through */
-//}
+
 
 .s-header {
   position: fixed;
@@ -12,12 +6,34 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #000; /* ensure text is readable */
+  background-color: transparent ;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  color: white;
 }
+
+/* When scrolled */
+.s-header.scrolled {
+  background-color: #5d734b;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional: change links color on scroll */
 
 .s-header a {
   color: white;
 }
+
+.header-nav-wrap .header-nav > li > a {
+  font-family: 'Poppins', 'Arial', sans-serif; /* clean, modern font */
+  font-size: 11px;       /* bigger size for top-level items */
+  font-weight: 700;      /* bold */
+  color: white;        /* white text */
+  text-decoration: none;
+  padding: 10px 10px;    /* space around text */
+  transition: color 0.3s ease;
+}
+
+
 
 .site-logo {
   display: flex;
@@ -29,6 +45,28 @@
   height: 60px;
   width: auto;
   object-fit: contain;
+}
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.logo-text {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'waterfall', cursive;
+
+}
+
+.logo-text-2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.logo-text-3 {
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .logo-box {
@@ -105,7 +143,7 @@
   display: block;
   padding: 10px 15px;
   text-decoration: none;
-  color: #333;
+  color: #000000;
 }
 
 .about-submenu a:hover {
@@ -153,7 +191,8 @@
   display: block;
   padding: 10px 15px;
   text-decoration: none;
-  color: #333;
+  color: #000000;
+
 }
 
 .connect-submenu a:hover {
@@ -203,7 +242,8 @@
   display: block;
   padding: 10px 15px;
   text-decoration: none;
-  color: #333;
+  color: #000000;
+
 }
 
 .events-submenu a:hover {
@@ -219,4 +259,9 @@
   .logo-hide-mobile {
     display: none;
   }
+
+
+
 }
+
+

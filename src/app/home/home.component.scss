@@ -1,35 +1,261 @@
-@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lightgallery.css');
-@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css');
+
 body {
   margin: 0;
+  font-family: sans-serif;
+  background: #000;
 }
-.gallery-item {
-  margin: 5px;
+
+/* === CAROUSEL BASE === */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 900px;
+  overflow: hidden;
+  background-color: #5d734b;
 }
 
+.carousel .list {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 
-
-
-.content_image{
-
+.carousel .item {
+  opacity: 0;
+  transition: opacity 1s ease;
   display: flex;
-  justify-content: center; /* horizontal center */
-  align-items: center;     /* vertical center (if needed) */
-  flex-wrap: wrap;         /* allow wrapping if you have many images */
-  gap: 1rem;               /* space between images */
-
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
-.content_image .gallery-item img{
-  max-width: 300px; /* control thumbnail size */
-  border-radius: 8px; /* optional: rounded corners */
-
+.carousel .item.active {
+  opacity: 1;
 }
 
-.photo-gallery{
-  background-color: black;
+.carousel .item-inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: nowrap;
 }
 
-.text-white {
+.carousel .content {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.carousel img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === TEXT === */
+.author {
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #ccc;
+}
+
+.title,
+.topic {
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1.3em;
+}
+
+.topic {
   color: white;
+}
+
+.des {
+  margin-top: 20px;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  color: #eee;
+}
+
+/* === ARROWS === */
+.arrows {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 100;
+}
+
+.arrows button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.arrows button:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* === THUMBNAILS === */
+.thumbnail {
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 90;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thumbnail .item img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.thumbnail .item.active img,
+.thumbnail .item img:hover {
+  opacity: 1;
+}
+
+/* === RESPONSIVE STYLES === */
+/* === RESPONSIVE STYLES === */
+@media (max-width: 1024px) {
+  .carousel {
+    height: auto;
+    min-height: 500px;
+  }
+
+  .carousel .item {
+    position: relative;
+    display: none;
+    opacity: 1;
+  }
+
+  .carousel .item.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carousel .item-inner {
+    flex-direction: column;
+  }
+
+  .carousel .content {
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .carousel img {
+    width: 100%;
+    height: auto;
+  }
+
+  .title,
+  .topic {
+    font-size: 2em;
+  }
+
+  .des {
+    font-size: 1em;
+  }
+
+  .thumbnail {
+    bottom: 80px;
+    gap: 10px;
+  }
+
+  .thumbnail .item img {
+    width: 70px;
+    height: 50px;
+  }
+
+  .arrows button {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* === TABLET & SMALL SCREEN FIX === */
+@media (max-width: 600px) {
+  .carousel .content {
+    padding-top: 100px; /* push text (author/title) below fixed header */
+  }
+
+  .title,
+  .topic {
+    font-size: 1.6em;
+  }
+
+  .des {
+    font-size: 0.9em;
+  }
+
+  .thumbnail {
+    bottom: 60px;
+    gap: 8px;
+  }
+
+  .thumbnail .item img {
+    width: 55px;
+    height: 40px;
+  }
+
+  .arrows button {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* === EXTRA SMALL DEVICES === */
+@media (max-width: 400px) {
+  .carousel .content {
+    padding-top: 80px; /* keeps .author visible below header */
+  }
+
+  .title,
+  .topic {
+    font-size: 1.3em;
+  }
+
+  .des {
+    font-size: 0.85em;
+  }
+}
+/* === RESPONSIVE BUTTON === */
+@media (max-width: 768px) {
+  .s-about .btn--about {
+    display: block;     /* full width on tablet */
+    width: 100%;        /* fill container */
+    padding: 12px 20px; /* reduce horizontal padding */
+    font-size: 0.95em;  /* slightly smaller font */
+  }
+}
+
+@media (max-width: 480px) {
+  .s-about .btn--about {
+    padding: 10px 15px;  /* even smaller padding */
+    font-size: 0.9em;    /* smaller font for mobile */
+    line-height: 1.3;    /* keep text readable */
+  }
 }

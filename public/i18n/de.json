@@ -7,28 +7,28 @@
     "faith-statement": "Glaubensbekenntnis",
     "our-mission": "Unsere Mission",
     "history": "Geschichte",
-    "church-staff": "Kirchenpersonal",
-    "supporting": "Unterstützung von Bethel",
+    "church-staff": "Mitarbeiter der Gemeinde",
+    "supporting": "El Bethel unterstützen",
     "gallery": "Galerie",
     "welcome": {
-      "subhead": "Willkommen in unserer Kirche",
-      "description": "In der El Bethel Assemblies of God Dortmund sind wir eine geistgeleitete Familie, die sich der Anbetung, dem Gebet und der Begegnung mit der Kraft Gottes im Alltag widmet. Wir glauben, dass derselbe Gott, der in der Bibel Wunder wirkte, auch heute Heilung, Befreiung und Hoffnung bringt und Leben durch Glauben und die Leitung des Heiligen Geistes verwandelt.",
+      "subhead": "Willkommen in unserer Gemeinde",
+      "description": "In der El Bethel Assemblies of God Dortmund sind wir eine vom Geist geführte Familie, die sich der Anbetung, dem Gebet und der Begegnung mit der Kraft Gottes im Alltag widmet. Wir glauben, dass derselbe Gott, der in der Bibel Wunder tat, auch heute Heilung, Befreiung und Hoffnung schenkt und Leben durch Glauben und die Führung des Heiligen Geistes verwandelt.",
       "button": "Mehr über El Bethel Assemblies of God"
     },
     "schedule": {
       "main-church-service": {
         "title": "Hauptgottesdienst",
-        "time": "Sonntag - 11:30 Uhr",
+        "time": "Sonntag - 11:00 Uhr",
         "location": "Hannöversche Str. 22A, 44143 Dortmund, Deutschland"
       },
       "bible-studies": {
         "title": "Bibelstudium",
-        "time": "Mittwoch - 19:00 - 20:30 Uhr",
+        "time": "Mittwoch - 19:00 Uhr - 20:30 Uhr",
         "location": "Hannöversche Str. 22A, 44143 Dortmund"
       },
       "prayer-meeting": {
         "title": "Gebetstreffen",
-        "time": "Freitag - 19:00 bis 20:30 Uhr",
+        "time": "Freitag - 19:00 Uhr - 20:30 Uhr",
         "location": "Hannöversche Str. 22A, 44143 Dortmund"
       }
     }
@@ -36,84 +36,84 @@
   "connect": {
     "main": "Verbinden",
     "bible-studies": "Bibelstudien",
-    "ministries": "Dienstbereiche",
+    "ministries": "Dienste",
     "prayer-meetings": "Gebetstreffen",
     "service-teams": "Dienstteams"
   },
   "events": {
     "main": "Veranstaltungen",
-    "add-events": "Veranstaltungen hinzufügen",
+    "add-events": "Veranstaltung hinzufügen",
     "upcoming-events": "Bevorstehende Veranstaltungen",
     "sunday-service": "Sonntagsgottesdienst",
-    "holy-communion": "Heilige Kommunion",
+    "holy-communion": "Abendmahl",
     "baptism-service": "Taufgottesdienst",
     "midnight-prayer": "Mitternachtsgebet",
-    "dedication": "Weihe",
+    "dedication": "Widmung",
     "membership": "Mitgliedschaft",
     "subhead": "Bevorstehende Veranstaltungen",
     "sunday-worship": {
       "title": "Sonntagsgottesdienst",
-      "description": "Erleben Sie einen schönen Sonntag, indem Sie mit uns in der El Bethel AG Kirche als Familie Gott loben und anbeten. 'Anbetung', geprägt von der kraftvollen und unbestreitbaren Gegenwart des Heiligen Geistes und dem lebensverändernden 'Wort', ist ein wunderbarer Start in die Woche. Treffen und pflegen Sie Gemeinschaft mit anderen Mitgliedern unserer Kirche und entdecken Sie, wie sehr Sie hier dazugehören. Wenn Sie uns noch nie besucht haben, heißen wir Sie herzlich willkommen!",
+      "description": "Erlebe einen gesegneten Sonntag, indem du gemeinsam mit uns in der El Bethel AG Gemeinde Gott lobst und anbetest. Die 'Anbetung', erfüllt von der kraftvollen und spürbaren Gegenwart des Heiligen Geistes und dem lebensverändernden 'Wort', ist ein wunderbarer Weg, deine Woche zu beginnen. Begegne und verbringe Zeit mit anderen Mitgliedern unserer Gemeinde – du wirst erstaunt sein, wie sehr du hier dazugehört. Wenn du uns zum ersten Mal besuchst, freuen wir uns, dich willkommen zu heißen!",
       "meta": {
         "date": "Jeden Sonntag",
-        "time": "11:30 Uhr",
+        "time": "11:00 Uhr - 15:00 Uhr",
         "location": "Hannöversche Str. 22A, 44143 Dortmund"
       }
     },
     "prayer-service": {
-      "title": "Gebetsgottesdienst",
-      "description": "Erleben Sie die Kraft des Gebets in unserem Gebetsgottesdienst in der El Bethel AG Kirche. Als Familie kommen wir zusammen, um unsere Herzen zu Gott zu erheben und darauf zu vertrauen, dass Er in unserem Leben wirkt. In dieser geistgefüllten Atmosphäre wird Frieden wiederhergestellt, Lasten werden gelöst und Stärke erneuert. Gebet bringt uns nicht nur näher zu Gott, sondern auch zueinander. Egal, ob es Ihr erster Besuch ist oder Sie schon einmal da waren, wir heißen Sie herzlich willkommen, zu sehen, wie Gebet Ihr Leben verändern kann!",
+      "title": "Gebetstreffen",
+      "description": "Erlebe die Kraft des Gebets in unserem Gebetstreffen in der El Bethel AG Gemeinde. Als Familie kommen wir zusammen, um unsere Herzen zu Gott zu erheben und Ihm zu vertrauen, dass Er in unserem Leben wirkt. In dieser vom Geist erfüllten Atmosphäre werden Frieden, Heilung und neue Kraft geschenkt. Gebet bringt uns nicht nur näher zu Gott, sondern auch zueinander. Ob du zum ersten Mal da bist oder schon öfter teilgenommen hast – wir heißen dich herzlich willkommen! Erlebe, wie Gebet dein Leben verändern kann!",
       "meta": {
         "date": "Jeden Freitag",
-        "time": "18:00 - 20:00 Uhr",
+        "time": "19:00 Uhr - 20:30 Uhr",
         "location": "Hannöversche Str. 22A, 44143 Dortmund"
       }
     },
-    "good-morning-jesus": {
-      "title": "Guten Morgen Jesus",
-      "description": "Starten Sie Ihren Samstag schön mit 'Guten Morgen Jesus' in der El Bethel AG Kirche. Kommen Sie als Familie, um den Herrn durch aufrichtiges Gebet, erhebliche Anbetung und das lebensspendende Wort zu begrüßen. Gefüllt mit der Gegenwart des Heiligen Geistes, bringen die Morgenstunden mit Jesus Frieden, Freude und neue Kraft für die kommende Woche. Treffen und verbinden Sie sich mit anderen Mitgliedern unserer Kirche und entdecken Sie, wie sehr Sie hier dazugehören. Wenn es Ihr erster Besuch ist, heißen wir Sie herzlich willkommen!",
+    "bible-studies": {
+      "title": "Bibelstudium",
+      "description": "Entdecke die zeitlose Wahrheit und die verwandelnde Kraft von Gottes Wort in unseren wöchentlichen Bibelstudien in der El Bethel AG Gemeinde. Gemeinsam tauchen wir tief in die Schrift ein, um Gottes Herz zu verstehen, unseren Glauben zu stärken und Sein Wort in unserem täglichen Leben anzuwenden. Ob du neu in der Bibel bist oder sie schon seit Jahren studierst – hier findest du Ermutigung, Erkenntnis und Gemeinschaft in einer liebevollen Familie, die gemeinsam in Christus wächst. Komm bereit, zu lernen, zu teilen und dich durch die Weisheit und Gegenwart des Heiligen Geistes erneuern zu lassen.",
       "meta": {
-        "date": "Jeden Samstag",
-        "time": "09:00 - 10:00 Uhr",
+        "date": "Jeden Mittwoch",
+        "time": "19:00 Uhr - 20:30 Uhr",
         "location": "Hannöversche Str. 22A, 44143 Dortmund"
       }
     },
     "midnight-service": {
       "title": "Mitternachtsgottesdienst",
-      "description": "Erleben Sie eine kraftvolle Begegnung mit Gott bei unserem Mitternachtsgottesdienst in der El Bethel AG Kirche, der am letzten Freitag jedes Monats stattfindet. Kommen Sie als Familie für Anbetung, Gebet und das lebensverändernde Wort in der Gegenwart des Heiligen Geistes. Diese heilige Zeit eignet sich perfekt für Reflexion, Erneuerung und Durchbrüche. Treffen und pflegen Sie Gemeinschaft mit anderen Mitgliedern und entdecken Sie, wie sehr Sie hier dazugehören. Wenn es Ihr erster Besuch ist, heißen wir Sie herzlich willkommen!",
+      "description": "Erlebe eine kraftvolle Begegnung mit Gott in unserem Mitternachtsgottesdienst in der El Bethel AG Gemeinde, der am letzten Freitag jedes Monats stattfindet. Gemeinsam als Familie kommen wir zum Lobpreis, Gebet und zum lebensverändernden Wort in der Gegenwart des Heiligen Geistes zusammen. Diese besondere Zeit ist perfekt für Besinnung, Erneuerung und Durchbrüche. Begegne anderen Mitgliedern unserer Gemeinde – du wirst erstaunt sein, wie sehr du hier dazugehört. Wenn du das erste Mal kommst, heißen wir dich herzlich willkommen!",
       "meta": {
         "date": "Letzter Freitag des Monats",
-        "time": "22:00 - 02:00 Uhr",
+        "time": "22:00 Uhr - 02:00 Uhr",
         "location": "Hannöversche Str. 22A, 44143 Dortmund"
       }
     }
   },
-  "support-us": "Unterstützen Sie uns",
+  "support-us": "Unterstütze uns",
   "contact": "Kontakt",
   "church": {
-    "title": "Mehr als eine Kirche – wir sind eine Familie in Christus",
+    "title": "Mehr als eine Gemeinde – wir sind eine Familie in Christus",
     "buttons": {
       "about": "Über uns",
       "events": "Bevorstehende Veranstaltungen"
     },
     "social": {
-      "title": "Folgen Sie uns",
+      "title": "Folge uns",
       "facebook": "Facebook",
       "youtube": "YouTube",
       "instagram": "Instagram"
     },
-    "scroll": "Mehr anzeigen"
+    "scroll": "Weiter scrollen"
   },
   "series": {
-    "subhead": "Aktuelle Serie",
+    "subhead": "Aktuelle Predigtreihe",
     "title": "Gestalte dein Leben mit den Worten des Lebens",
-    "description": "Aut sed amet et quis aliquid laborum minus consequatur. Animi repellendus quas. Est voluptates minima ut dolorum aliquid sint. Ratione et et molestias rerum quibusdam. Deserunt suscipit ut expedita. Non numquam aut eum perferendis molestiae praesentium aliquid voluptatum numquam dolorum aliquid sint minima.",
+    "description": "Erlebe, wie Gottes Wort dein Leben formt und erneuert. Seine Wahrheit gibt Hoffnung, Orientierung und Kraft für jeden Tag. Gemeinsam entdecken wir, was es bedeutet, im Licht Seines Wortes zu leben und unseren Glauben zu vertiefen.",
     "buttons": {
       "watch-video": "Video ansehen",
-      "listen-message": "Botschaft anhören"
+      "listen-message": "Predigt anhören"
     },
     "subscribe": {
-      "text": "Verpassen Sie keine Botschaft. Abonnieren Sie unsere YouTube- und Podcast-Kanäle.",
+      "text": "Verpasse keine Botschaft. Abonniere unseren YouTube- und Podcast-Kanal.",
       "links": {
         "apple-podcast": "Apple Podcast",
         "spotify": "Spotify",
@@ -133,11 +133,11 @@
       "title": "El Bethel Assemblies of God Dortmund",
       "subtitle": "Dortmund, Deutschland"
     },
-    "description": "El Bethel AG ist eine Kirche, die an Jesus glaubt, eine Kirche, die Gott und Menschen liebt.",
+    "description": "El Bethel AG ist eine Gemeinde, die an Jesus glaubt – eine Gemeinde, die Gott und Menschen liebt.",
     "location": {
       "title": "Unser Standort",
       "address": "Hannöversche Str. 22A, 44143 Dortmund",
-      "button": "Wegbeschreibung"
+      "button": "Route anzeigen"
     },
     "quick-links": {
       "title": "Schnellzugriff",
@@ -145,7 +145,7 @@
         "home": "Startseite",
         "about": "Über uns",
         "events": "Veranstaltungen",
-        "support-us": "Unterstützen Sie uns",
+        "support-us": "Unterstütze uns",
         "contact": "Kontakt"
       }
     },

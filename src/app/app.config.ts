@@ -9,7 +9,6 @@ export function HttpLoaderFactory(http: HttpClient) {
 
   // public folder i18n
   //return new TranslateHttpLoader(http, 'i18n/', '.json');
-  // assets folder i18n
   return new TranslateHttpLoader(http, '../../../i18n/', '.json');
 
 }
