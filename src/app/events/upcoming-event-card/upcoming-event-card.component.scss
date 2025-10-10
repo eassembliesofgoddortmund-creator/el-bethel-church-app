@@ -80,3 +80,61 @@
 .justify-text{
   text-align: justify;
 }
+
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+  .event-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .event-left {
+    align-items: center;
+  }
+
+  .event-info {
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .event-flyer img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .event-actions {
+    justify-content: center;
+
+    button {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .event-card {
+    padding: 12px;
+  }
+
+  .event-info h2 {
+    font-size: 18px;
+  }
+
+  .event-info p {
+    font-size: 13px;
+  }
+
+  .event-actions button {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
