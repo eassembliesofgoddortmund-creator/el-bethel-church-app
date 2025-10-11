@@ -80,13 +80,16 @@ export class HomeComponent implements OnInit{
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: '"El Bethel = “God of the House of God” — a name that honors the living presence of God who revealed Himself to Jacob at Bethel.', img: '/bethel_13.jpeg' },
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Matthew 22:37–39 – Jesus said to him, You shall love the Lord your God with all your heart, with all your soul, and with all your mind. This is the first and great commandment. And the second is like it: You shall love your neighbor as yourself."', img: '/bethel_10.jpg' },
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'John 13:34–35 - "A new commandment I give to you, that you love one another; as I have loved you, that you also love one another. By this all will know that you are My disciples, if you have love for one another."', img: '/bethel_6.jpg' },
-    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Ephesians 4:3 – “Make every effort to keep the unity of the Spirit through the bond of peace.”', img: '/bethel_8.jpg' },
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Colossians 3:23 – “Whatever you do, work at it with all your heart, as working for the Lord, not for men.”', img: '/bethel_9.jpg' },
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Hebrews 13:16 – “Do not forget to do good and to share with others, for with such sacrifices God is pleased.”', img: '/bethel_10.jpg' },
-    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: '1 Peter 4:10 – “Each of you should use whatever gift you have received to serve others, as faithful stewards of God’s grace.”', img: '/background_8.png' }
-
+    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: '1 Peter 4:10 – “Each of you should use whatever gift you have received to serve others, as faithful stewards of God’s grace.”', img: '/bethel_11.jpg' },
+    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Ephesians 4:3 – “Make every effort to keep the unity of the Spirit through the bond of peace.”', img: '/bethel_8.jpg' },
 
   ];
+
+
+
+
 
   lang = '';
   private langSubscription!: Subscription;
