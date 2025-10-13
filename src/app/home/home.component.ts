@@ -77,13 +77,22 @@ export class HomeComponent implements OnInit{
   };
 
   slides = [
-    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: '"El Bethel = “God of the House of God” — a name that honors the living presence of God who revealed Himself to Jacob at Bethel.', img: '/bethel_13.jpeg' },
+    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Jeremiah 3:15 – “Then I will give you shepherds after my own heart, who will lead you with knowledge and understanding.”', img: '/pastor_family.jpeg' },
+    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: '"El Bethel = “God of the House of God” — a name that honors the living presence of God who revealed Himself to Jacob at Bethel.',  img: '/pianist.jpg'  },
+    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Jeremiah 29:11 (NIV) - "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future."', img: '/pastor_paul.jpg' },
+    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: '1 John 4:19 (NIV) - "We love because he first loved us."', img: '/core_team.jpg' },
+    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Psalm 100:4 (NIV) - "Enter his gates with thanksgiving and his courts with praise; give thanks to him and praise his name."', img: '/bethel_29.jpeg' },
+    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: '1 John 3:18 (NIV) - "Dear children, let us not love with words or speech but with actions and in truth."', img: '/music_team.jpg' },
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Matthew 22:37–39 – Jesus said to him, You shall love the Lord your God with all your heart, with all your soul, and with all your mind. This is the first and great commandment. And the second is like it: You shall love your neighbor as yourself."', img: '/bethel_10.jpg' },
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'John 13:34–35 - "A new commandment I give to you, that you love one another; as I have loved you, that you also love one another. By this all will know that you are My disciples, if you have love for one another."', img: '/bethel_6.jpg' },
-    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Colossians 3:23 – “Whatever you do, work at it with all your heart, as working for the Lord, not for men.”', img: '/bethel_9.jpg' },
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Hebrews 13:16 – “Do not forget to do good and to share with others, for with such sacrifices God is pleased.”', img: '/bethel_10.jpg' },
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: '1 Peter 4:10 – “Each of you should use whatever gift you have received to serve others, as faithful stewards of God’s grace.”', img: '/bethel_11.jpg' },
-    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Ephesians 4:3 – “Make every effort to keep the unity of the Spirit through the bond of peace.”', img: '/bethel_8.jpg' },
+    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Ephesians 4:3 – “Make every effort to keep the unity of the Spirit through the bond of peace.”', img: '/bethel_16.jpeg' },
+    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Colossians 3:23–24 (NIV) - "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters, since you know that you will receive an inheritance from the Lord as a reward. It is the Lord Christ you are serving.', img: '/bethel_14.jpeg' },
+
+
+
+
 
   ];
 

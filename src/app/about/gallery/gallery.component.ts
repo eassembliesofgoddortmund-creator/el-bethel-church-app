@@ -22,7 +22,20 @@ export class GalleryComponent implements OnInit{
       'bethel_6.jpg',
       'bethel_7.jpg',
       'bethel_8.jpg',
-      'bethel_9.jpg'
+      'bethel_9.jpg',
+      'bethel_11.jpg',
+      'bethel_12.jpg',
+      'bethel_13.jpeg',
+      'bethel_14.jpeg',
+      'bethel_15.jpeg',
+      'bethel_16.jpeg',
+      'bethel_17.jpeg',
+      'bethel_18.jpeg',
+      'bethel_19.jpeg',
+      'music_team.jpg',
+      'pastor_family.jpeg',
+      'pianist.jpg',
+      'core_team.jpg',
 
     ];
 
