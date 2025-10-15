@@ -1594,7 +1594,7 @@ input::-moz-focus-inner {
   line-height: 1.5;
   text-transform: uppercase;
   letter-spacing: .3rem;
-  color: #fb8b23;
+  color: #26307f;
   margin-top: 0;
   margin-bottom: .4rem;
   margin-left: 4px;
@@ -1631,8 +1631,8 @@ input::-moz-focus-inner {
 
 .events-list__item-title a:hover,
 .events-list__item-title a:focus {
-  color: #01579B;
-  border-bottom: 1px solid #01579B;
+  color: #26307f;
+  border-bottom: 1px solid #26307f;
 }
 
 .events-list__meta {
@@ -1720,7 +1720,7 @@ input::-moz-focus-inner {
   font-weight: 700;
   text-align: center;
   color: #ffffff;
-  background-color: #01579B;
+  background-color: #26307f;
   height: 4.8rem;
   width: 4.8rem;
   line-height: 4.8rem;
@@ -2539,10 +2539,8 @@ html.no-csstransitions .hero-content {
   display: block;
   width: 100%;
   margin-right: 0;
-  background-color: #01579B
-
-;
-  border-color: #01579B
+  background-color: #0f1f54;
+  border-color: #0f1f54
 
 
 ;
@@ -3163,8 +3161,8 @@ html.no-csstransitions .hero-content {
 }
 
 .s-footer .btn--footer {
-  border-color:#01579B;
-  background-color: #01579B;
+  border-color:#0f1f54;
+  background-color: #0f1f54;
   padding: 0 4rem;
 }
 

@@ -17,8 +17,8 @@ export class ImpressumComponent {
 
   // Contact Information
   phone1: string = '+49 177 5650008';
-  email: string = 'fredrick0@yahoo.com';
-  website: string = 'https://www.elbetheldortmund.de'; // Add your real domain if available
+  email: string = 'eassembliesofgoddortmund@gmail.com';
+  website: string = 'https://el-bethel-ag-international-dortmund.vercel.app/'; // Add your real domain if available
 
   // Responsible Representatives
   authorizedRepresentative: string = 'Pastor Fredrick';

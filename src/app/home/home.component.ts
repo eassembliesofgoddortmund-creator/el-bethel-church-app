@@ -25,6 +25,7 @@ import {
   increment, setDoc,
 } from '@angular/fire/firestore';
 import {FreeConferenceCallComponent} from '../free-conference-call/free-conference-call.component';
+import {LinkTreeComponent} from '../link-tree/link-tree.component';
 @Component({
   selector: 'app-home',
   standalone:true,
@@ -35,7 +36,8 @@ import {FreeConferenceCallComponent} from '../free-conference-call/free-conferen
     CommonModule,
     HomeGalleryComponent,
     FormsModule,
-    FreeConferenceCallComponent
+    FreeConferenceCallComponent,
+    LinkTreeComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

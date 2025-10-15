@@ -12,6 +12,7 @@ import {ConnectGroupComponent} from '../connect-group/connect-group.component';
 import {UpcomingEventsComponent} from './upcoming-events/upcoming-events.component';
 import {AddEventsComponent} from './add-events/add-events.component';
 import {UpdateUpcomingEventCardComponent} from './update-upcoming-event-card/update-upcoming-event-card.component';
+import {AuthGuard} from '../auth.guard';
 
 const routes: Routes = [
   {
@@ -26,8 +27,8 @@ const routes: Routes = [
       {path:'child-dedication',component: ChildDedicationComponent},
       {path:'membership-class',component: MembershipClassComponent},
       {path:'upcoming-events',component: UpcomingEventsComponent},
-      {path:'update-upcoming-events/:id',component: UpdateUpcomingEventCardComponent},
-      {path:'add-events',component: AddEventsComponent}
+      {path:'update-upcoming-events/:id',component: UpdateUpcomingEventCardComponent, canActivate: [AuthGuard]},
+      {path:'add-events',component: AddEventsComponent, canActivate: [AuthGuard]}
 
 
     ]
