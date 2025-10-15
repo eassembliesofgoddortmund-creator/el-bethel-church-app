@@ -15,7 +15,9 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-
+p,a{
+  font-size: medium;
+}
 
 .profile-pic {
   width: 150px;
@@ -23,8 +25,6 @@
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-
-
 }
 
 .designation {

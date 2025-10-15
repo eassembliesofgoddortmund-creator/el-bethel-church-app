@@ -24,6 +24,7 @@ import {
   runTransaction,
   increment, setDoc,
 } from '@angular/fire/firestore';
+import {FreeConferenceCallComponent} from '../free-conference-call/free-conference-call.component';
 @Component({
   selector: 'app-home',
   standalone:true,
@@ -33,7 +34,8 @@ import {
     WhatsappComponent,
     CommonModule,
     HomeGalleryComponent,
-    FormsModule
+    FormsModule,
+    FreeConferenceCallComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

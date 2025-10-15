@@ -15,41 +15,29 @@ export class ChurchStaffComponent {
     {
       name: 'Rev Pastor Fredrick',
       title: 'Senior Pastor',
-      email: 'fredrick@_____.com',
+      email: 'eassembliesofgoddortmund@gmail.com',
+      photo: 'fredric_staff_member.png'
+    },
+    {
+      name: 'Rev Pastor Fredrick',
+      title: 'Senior Pastor',
+      email: 'eassembliesofgoddortmund@gmail.com',
+      photo: 'fredric_staff_member.png'
+    },
+    {
+      name: 'Rev Pastor Fredrick',
+      title: 'Senior Pastor',
+      email: 'eassembliesofgoddortmund@gmail.com',
+      photo: 'fredric_staff_member.png'
+    },
+    {
+      name: 'Rev Pastor Fredrick',
+      title: 'Senior Pastor',
+      email: 'eassembliesofgoddortmund@gmail.com',
       photo: 'fredric_staff_member.png'
     },
 
-    {
-      name: 'Rev Pastor Fredrick',
-      title: 'Senior Pastor',
-      email: 'fredrick@_____.com',
-      photo: 'fredric_staff_member.png'
-    },
 
-    {
-      name: 'Rev Pastor Fredrick',
-      title: 'Senior Pastor',
-      email: 'fredrick@_____.com',
-      photo: 'fredric_staff_member.png'
-    },
-    {
-      name: 'Rev Pastor Fredrick',
-      title: 'Senior Pastor',
-      email: 'fredrick@_____.com',
-      photo: 'fredric_staff_member.png'
-    },
-    {
-      name: 'Rev Pastor Fredrick',
-      title: 'Senior Pastor',
-      email: 'fredrick@_____.com',
-      photo: 'fredric_staff_member.png'
-    },
-    {
-      name: 'Rev Pastor Fredrick',
-      title: 'Senior Pastor',
-      email: 'fredrick@_____.com',
-      photo: 'fredric_staff_member.png'
-    },
 
 
   ];
