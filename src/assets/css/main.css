@@ -2526,7 +2526,7 @@ html.no-csstransitions .hero-content {
 }
 
 .s-about .subhead {
-  color: #5c724a;
+  color: #01579B;
   margin-bottom: 4rem;
 }
 
@@ -2539,9 +2539,11 @@ html.no-csstransitions .hero-content {
   display: block;
   width: 100%;
   margin-right: 0;
-  background-color: #5c724a
+  background-color: #01579B
+
 ;
-  border-color: #5c724a
+  border-color: #01579B
+
 
 ;
 }
@@ -3161,8 +3163,8 @@ html.no-csstransitions .hero-content {
 }
 
 .s-footer .btn--footer {
-  border-color:#5c724a;
-  background-color: #5c724a;
+  border-color:#01579B;
+  background-color: #01579B;
   padding: 0 4rem;
 }
 

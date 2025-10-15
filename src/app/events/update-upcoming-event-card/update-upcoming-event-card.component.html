@@ -5,7 +5,7 @@
     <form #updateEvent ="ngForm"  (ngSubmit)="onUpdate()">
 
       <div class="form-group">
-        <label>Upload Flyer</label>
+        <label>Upload Flyer (file should be less than 1 MB)</label>
         <input type="file" (change)="onFileSelected($event)" required />
       </div>
 

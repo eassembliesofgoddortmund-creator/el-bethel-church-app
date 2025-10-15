@@ -12,7 +12,8 @@ body {
   height: 100vh;
   max-height: 900px;
   overflow: hidden;
-  background-color: #5d734b;
+  background-color: #01579B
+;
 }
 
 .carousel .list {
@@ -131,7 +132,7 @@ body {
   height: 40px;
   border-radius: 50%; /* makes it a circle */
   border: none;
-  background-color: #5d734b;
+  background-color: #01579B;
   color: white;
   font-size: 1.0em; /* controls icon size */
   cursor: pointer;
@@ -147,7 +148,7 @@ body {
 }
 
 .update-btn:hover {
-  background-color: #4a5a38;
+  background-color: #01579B;
 }
 
 /* === Update Form === */
@@ -175,7 +176,7 @@ body {
 }
 
 .update-form button:hover {
-  background-color: #4a5a38;
+  background-color: #01579B;
 }
 
 
