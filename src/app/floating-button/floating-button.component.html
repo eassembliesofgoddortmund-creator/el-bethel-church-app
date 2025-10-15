@@ -1,4 +1,13 @@
-<button class="floating-btn" matFab extended (click)="onClick()">
+<div id="preloader" *ngIf="showPreloader">
+  <div id="loader" class="dots-jump">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+
+<button (click)="togglePreloader()" class="floating-btn" matFab extended >
   <mat-icon>favorite</mat-icon>
   Know God
 </button>

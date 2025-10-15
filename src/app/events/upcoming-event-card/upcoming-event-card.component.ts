@@ -39,6 +39,13 @@ export class UpcomingEventCardComponent implements OnInit{
 
   }
 
+  openFlyer(flyer: any) {
+    const newTab = window.open();
+    if (newTab) {
+      newTab.document.write(`<img src="${flyer}" style="width:100%">`);
+    }
+  }
+
 
   onUpdate() {
     console.log("update",this.event.id)

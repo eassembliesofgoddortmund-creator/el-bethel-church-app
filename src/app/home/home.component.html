@@ -19,6 +19,24 @@
             <div class="topic">{{slide.topic}}</div>
             <div class="des">{{slide.des}}</div>
 
+            <br>
+            <!-- Curved card -->
+            <div class="curved-card">
+              <button *ngIf="isLoggedIn" class="update-btn" (click)="toggleForm()">⟳</button> <!-- small round update button -->
+              <!-- Bind the service time dynamically -->
+              <p class="service-time">Sunday Church Services: {{ serviceTime }}</p>
+              <p class="service-address">{{ serviceAddress }}</p>
+              <p class="mission">To reach the nations and make disciples</p>
+
+              <!-- Update form (hidden by default) -->
+              <form class="update-form" *ngIf="showForm" (ngSubmit)="updateTime()">
+                <input type="text" [(ngModel)]="newTime" name="time" placeholder="Enter new time" required />
+                <input type="text" [(ngModel)]="serviceAddress" name="serviceAddress" placeholder="Enter new address" required />
+
+                <button type="submit">Update</button>
+              </form>
+            </div>
+
           </div>
           <img [src]="slide.img" [alt]="slide.title" />
 

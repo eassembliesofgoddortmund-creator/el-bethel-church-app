@@ -21,7 +21,10 @@ export class UpdateUpcomingEventCardComponent implements OnInit{
   @ViewChild("updateEvent") eventForm:any;
   @Input() isAdmin = false;
   previewUrl: string | ArrayBuffer | null = null;
-  events: EventsModel = { id:'', title: '', description: '', flyer: '' };
+  events: EventsModel = { id:'', title: '', description: '', flyer: '',   date: '',
+    time: '',
+    location: '',
+    contact_person:'Fredrick G Nimako ' };
   flyer:string ="";
   eventId: string | null = null;
   @Output() eventAdded = new EventEmitter<EventsModel>();
@@ -47,22 +50,32 @@ export class UpdateUpcomingEventCardComponent implements OnInit{
     await updateDoc(eventDocRef, {
       title: this.events.title,
       description: this.events.description,
-      flyer: this.flyer || this.events.flyer
+      flyer: this.flyer || this.events.flyer,
+      date: this.eventForm.value.date,
+      time: this.eventForm.value.time,
+      location: this.eventForm.value.location,
+      contact_person: this.eventForm.value.contact_person
     });
     this.resetForm();
     console.log(`Event ${this.eventId} updated`);
     alert("Event updated successfully!");
   }
 
-  resetForm(){
 
+
+  resetForm() {
     this.eventForm.reset({
-      'title':'',
-      'description':'',
-      'flyer':''
-    })
-    this.previewUrl ="";
+      title: '',
+      description: '',
+      flyer: '',
+      date: '',
+      time: '',
+      location: '',
+      contact_person:''
+    });
+    this.previewUrl = "";
   }
+
 
 
   onFileSelected(event: any) {

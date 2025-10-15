@@ -4,70 +4,117 @@
   <div class="gradient-overlay"></div>
   <div class="row page-header__content">
     <div class="column">
-      <h1>Privacy Policy</h1>
+      <h1>Privacy Policy (Datenschutzerklärung)</h1>
     </div>
   </div>
-</section> <!-- end page-header -->
-
+</section>
+<!-- end page-header -->
 
 <!-- page content
 ================================================== -->
 <section class="page-content">
-
   <div class="row">
     <div class="column">
-      <!-- privacy-policy.component.html -->
       <div class="privacy-container">
-        <p>Welcome to the official website of <strong>{{churchName}}</strong>. Protecting your personal data is very important to us. This Privacy Policy explains how we collect, process, and safeguard your data when you visit our website.</p>
+
+        <p>
+          Welcome to the official website of <strong>{{ churchName }}</strong>. Protecting your personal data is very important to us.
+          This Privacy Policy explains how we collect, process, and safeguard your data when you visit our website, in accordance
+          with the General Data Protection Regulation (GDPR) and the German Federal Data Protection Act (BDSG).
+        </p>
 
         <h2>1. Responsible Entity</h2>
-        <p>The responsible entity for data processing on this website is:</p>
         <p>
-          {{churchName}}<br>
-          {{contactAddress}}<br>
-          Email: <a href="mailto:{{contactEmail}}">{{contactEmail}}</a>
+          The responsible entity for data processing on this website is:<br><br>
+          {{ churchName }}<br>
+          {{ contactAddress }}<br>
+          Email: <a href="mailto:{{ contactEmail }}">{{ contactEmail }}</a>
         </p>
 
-        <h2>2. Data We Collect</h2>
-        <ul>
-          <li>Details you provide while visiting our church.</li>
-          <li>Cookies or similar technologies if used.</li>
-        </ul>
-
-        <h2>3. Purpose and Legal Basis</h2>
-        <p>We collect and process your data to:</p>
-        <ul>
-          <li>Respond to inquiries and messages.</li>
-          <li>Send newsletters or event notifications if you have consented.</li>
-          <li>Ensure the security and functionality of our website.</li>
-        </ul>
-
-        <h2>4. Data Sharing</h2>
-        <p>We do not sell or rent your personal data. Your data may only be shared with trusted service providers who support our website or newsletter.</p>
-
-
-        <h2>5. Your Rights</h2>
-        <p>You have the right to:</p>
-        <ul>
-          <li>Request access to your personal data.</li>
-          <li>Request correction or deletion of your data.</li>
-          <li>Object to the processing of your data.</li>
-          <li>Withdraw consent at any time for newsletters or other communications.</li>
-        </ul>
-
-        <h2>6. Data Protection Officer</h2>
-        <p>If you have questions or concerns about your data, contact our Data Protection Officer:</p>
+        <h2>2. Hosting via Vercel</h2>
         <p>
-          {{dataProtectionOfficer}}<br>
-          Email: <a href="mailto:{{dpoEmail}}">{{dpoEmail}}</a>
+          Our website is hosted on the platform <strong>Vercel</strong> (<a href="https://vercel.com" target="_blank" rel="noopener">https://vercel.com</a>).
+          The provider is {{ hostingProvider }}.
+        </p>
+        <p>
+          When you visit our website, Vercel automatically collects and stores certain information (so-called "server log files"),
+          which your browser automatically transmits to us. These include:
+        </p>
+        <ul>
+          <li>IP address (anonymized if possible)</li>
+          <li>Date and time of access</li>
+          <li>Browser type and version</li>
+          <li>Operating system used</li>
+          <li>Referrer URL (previously visited page)</li>
+          <li>Hostname of the accessing device</li>
+        </ul>
+        <p>
+          The processing of this data is necessary for the secure and stable operation of the website (Art. 6(1)(f) GDPR).
+          Data is stored temporarily and automatically deleted after a short period.
+        </p>
+        <p>
+          We have concluded a Data Processing Agreement (DPA) with Vercel to ensure that all personal data is processed in accordance
+          with the GDPR. Data may be transferred to servers outside the EU (e.g., the USA) under standard contractual clauses approved by the European Commission.
         </p>
 
-        <h2>7. Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Please check this page regularly for updates.</p>
+        <h2>3. Data We Collect</h2>
+        <ul>
+          <li>Information you provide via contact forms in the church or by email</li>
+          <li>Technical usage data (see above)</li>
+          <li>Cookies or similar technologies, if used</li>
+        </ul>
+
+        <h2>4. Purpose and Legal Basis</h2>
+        <ul>
+          <li>To respond to inquiries or prayer requests (Art. 6(1)(b) GDPR)</li>
+          <li>To send event or newsletter updates with your consent (Art. 6(1)(a) GDPR)</li>
+          <li>To maintain and secure the website (Art. 6(1)(f) GDPR)</li>
+        </ul>
+
+        <h2>5. Cookies and Analytics</h2>
+        <p>
+          Our website may use cookies for functional purposes. We do not use tracking or analytics tools such as Google Analytics.
+          If cookies are used, you will be notified and may refuse non-essential cookies. Essential cookies are required to ensure
+          the website functions properly.
+        </p>
+
+        <h2>6. Data Sharing</h2>
+        <p>
+          We do not sell or rent personal data. Data is only shared with technical service providers (such as Vercel) who are contractually
+          obligated to handle data according to GDPR.
+        </p>
+
+        <h2>7. Your Rights Under GDPR</h2>
+        <ul>
+          <li>Right of access to your personal data (Art. 15 GDPR)</li>
+          <li>Right to rectification (Art. 16 GDPR)</li>
+          <li>Right to erasure (Art. 17 GDPR)</li>
+          <li>Right to restriction of processing (Art. 18 GDPR)</li>
+          <li>Right to data portability (Art. 20 GDPR)</li>
+          <li>Right to object to processing (Art. 21 GDPR)</li>
+          <li>Right to withdraw consent (Art. 7(3) GDPR)</li>
+        </ul>
+
+        <h2>8. Data Protection Officer</h2>
+        <p>
+          For questions about data protection, please contact:<br><br>
+          {{ dataProtectionOfficer }}<br>
+          Email: <a href="mailto:{{ dpoEmail }}">{{ dpoEmail }}</a>
+        </p>
+
+        <h2>9. Data Retention</h2>
+        <p>
+          Personal data that you provide to us (e.g., through contact forms or email) will only be stored for as long as necessary
+          to fulfill the purpose of collection or as required by legal retention obligations.
+        </p>
+
+        <h2>10. Changes to This Privacy Policy</h2>
+        <p>
+          We may update this Privacy Policy to comply with new legal requirements or reflect changes in our data practices.
+          The current version is always available on this page.
+        </p>
+
       </div>
-
-
     </div>
   </div>
-
 </section>

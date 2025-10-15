@@ -1,9 +1,23 @@
-<h1 class="heading-margin-top" >Upcoming Events</h1>
+<h3 style="color: #0f3d81" class="heading-margin-top" >Upcoming Events</h3>
 <div class="event-card">
   <div class="event-left">
     <div class="event-info">
-      <h2>{{ event.title }}</h2>
-      <p>{{ event.description }}</p>
+      <h2> <strong>Title : </strong>  {{ event.title }}</h2>
+      <p> <strong>Description : </strong>{{ event.description }}</p>
+      <p *ngIf="event.date; else noDate">
+        <strong>Date:</strong> {{ event.date | date:'d MMMM y' }}
+      </p>
+      <ng-template #noDate>
+        <p><strong>Date:</strong> Please check the flyer or ask the contact person</p>
+      </ng-template>
+      <p *ngIf="event.time; else noTime">
+        <strong>Time:</strong> {{event.time }}
+      </p>
+      <ng-template #noTime>
+        <p><strong>Time:</strong> Please check the flyer or ask the contact person</p>
+      </ng-template>
+      <p> <strong>Location : </strong>  {{event.location}}</p>
+      <p> <strong>Contact Person : </strong>{{event.contact_person}}</p>
     </div>
 
     <div class="event-actions">
@@ -13,6 +27,11 @@
   </div>
 
   <div class="event-flyer">
-    <img [src]="event.flyer" alt="{{ event.title }} Flyer" />
+    <img
+      [src]="event.flyer"
+      alt="{{ event.title }} Flyer"
+      (click)="openFlyer(event.flyer)"
+      style="cursor: pointer;"
+    />
   </div>
 </div>

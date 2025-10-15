@@ -13,7 +13,6 @@ import {
   runTransaction,
   increment, setDoc,
 } from '@angular/fire/firestore';
-import { Storage, ref, uploadBytes, getDownloadURL } from '@angular/fire/storage';
 import {Observable} from 'rxjs';
 
 @Component({
@@ -31,7 +30,10 @@ export class AddEventsComponent implements OnInit {
   selectedFile?: File;
   previewUrl: string | ArrayBuffer | null = null;
 
-  events: EventsModel = { id:'',title: '', description: '', flyer: '' };
+  events: EventsModel = { id:'', title: '', description: '', flyer: '',   date: '',
+    time: '',
+    location: '',
+    contact_person:'Fredrick G Nimako ' };
   flyer:string ="";
   events$: Observable<EventsModel[]> | undefined;
   newId: number = 0;
@@ -80,7 +82,11 @@ export class AddEventsComponent implements OnInit {
         id: this.newId, // store it as a field too
         title: this.eventForm.value.title,
         description: this.eventForm.value.description,
-        flyer: this.flyer
+        flyer: this.flyer,
+        date: this.eventForm.value.date,
+        time: this.eventForm.value.time,
+        location: this.eventForm.value.location,
+        contact_person: this.eventForm.value.contact_person
       });
       alert("Form Submitted Successfully")
       this.resetForm();
@@ -90,14 +96,17 @@ export class AddEventsComponent implements OnInit {
     }
   }
 
-  resetForm(){
-
+  resetForm() {
     this.eventForm.reset({
-      'title':'',
-      'description':'',
-      'flyer':''
-    })
-    this.previewUrl ="";
+      title: '',
+      description: '',
+      flyer: '',
+      date: '',
+      time: '',
+      location: '',
+      contact_person:''
+    });
+    this.previewUrl = "";
   }
 
 

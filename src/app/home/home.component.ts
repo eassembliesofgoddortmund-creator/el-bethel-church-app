@@ -13,7 +13,17 @@ import {WhatsappComponent} from '../whatsapp/whatsapp.component';
 import { trigger, style, animate, transition, query, group } from '@angular/animations';
 import {CommonModule} from '@angular/common';
 import {HomeGalleryComponent} from './home-gallery/home-gallery.component';
-
+import {FormsModule} from '@angular/forms';
+import {
+  Firestore,
+  collection,
+  collectionData,
+  addDoc,
+  getDoc,
+  doc,
+  runTransaction,
+  increment, setDoc,
+} from '@angular/fire/firestore';
 @Component({
   selector: 'app-home',
   standalone:true,
@@ -22,7 +32,8 @@ import {HomeGalleryComponent} from './home-gallery/home-gallery.component';
     LightgalleryModule,
     WhatsappComponent,
     CommonModule,
-    HomeGalleryComponent
+    HomeGalleryComponent,
+    FormsModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
@@ -58,7 +69,13 @@ import {HomeGalleryComponent} from './home-gallery/home-gallery.component';
 })
 export class HomeComponent implements OnInit{
 
+  isLoggedIn = false;
   showPreloader = false;
+  showForm = false;
+  newTime = '';
+  serviceTime = '11:30 AM';
+  // **New dynamic fields**
+  serviceAddress = 'Hannöversche Str. 22A, 44143 Dortmund';
 
   private intervalId: any;
   currentIndex = 0;
@@ -75,6 +92,17 @@ export class HomeComponent implements OnInit{
     const { index, prevIndex } = detail;
     console.log(index, prevIndex);
   };
+
+
+
+
+  toggleForm() {
+    this.showForm = !this.showForm;
+  }
+
+
+
+
 
   slides = [
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Jeremiah 3:15 – “Then I will give you shepherds after my own heart, who will lead you with knowledge and understanding.”', img: '/pastor_family.jpeg' },
@@ -108,6 +136,7 @@ export class HomeComponent implements OnInit{
     private languageService: LanguageService,        // Inject the service
     private authService:AuthService,
     private router: Router,  // ✅ inject router
+    private fireStore: Firestore  // 🔑 inject Firestore
 
   ) {}
 
@@ -119,6 +148,14 @@ export class HomeComponent implements OnInit{
       this.cdr.detectChanges(); // Trigger change detection
       console.log("HOME LANG", this.lang);
     });
+
+    // 🔑 subscribe to login state
+    this.authService.isLoggedIn().subscribe(status => {
+      this.isLoggedIn = status;
+      this.cdr.detectChanges();
+    });
+
+    this.loadServiceTimeAndAddress();
   }
 
 
@@ -139,6 +176,49 @@ export class HomeComponent implements OnInit{
       clearInterval(this.intervalId);
     }
   }
+
+
+  async loadServiceTimeAndAddress() {
+    try {
+      const docRef = doc(this.fireStore, 'churchTimingAddress', 'main');
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+        const data = docSnap.data();
+        this.serviceTime = data['time'] || this.serviceTime;
+        this.serviceAddress = data['address'] || this.serviceAddress;
+        this.cdr.detectChanges(); // Update UI
+      } else {
+        console.log('No church timing document found.');
+      }
+    } catch (error) {
+      console.error('Error loading service info:', error);
+    }
+  }
+
+  async updateTime() {
+    if (this.newTime.trim() && this.serviceAddress.trim()) {
+      this.serviceTime = this.newTime;
+      this.showForm = false;
+
+      try {
+        const docRef = doc(this.fireStore, 'churchTimingAddress', 'main');
+        await setDoc(docRef, {
+          time: this.serviceTime,
+          address: this.serviceAddress
+        });
+        console.log('Service time and address updated in Firestore');
+
+        // Immediately reload the values for UI
+        await this.loadServiceTimeAndAddress();
+      } catch (error) {
+        console.error('Error updating service info:', error);
+      }
+
+      this.newTime = '';
+    }
+  }
+
 
   nextSlide() {
     this.currentIndex = (this.currentIndex + 1) % this.slides.length;

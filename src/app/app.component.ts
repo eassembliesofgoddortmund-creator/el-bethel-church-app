@@ -49,8 +49,6 @@ export class AppComponent {
     '/bethel_17.jpeg',
     '/bethel_19.jpeg',
     '/bethel_29.jpeg',
-    '/bethel_26.png',
-    'bethel_28.png'
   ];
 
   ngAfterViewInit(): void {

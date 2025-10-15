@@ -1,21 +1,27 @@
 import { Component } from '@angular/core';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-impressum',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './impressum.component.html',
   styleUrl: './impressum.component.scss'
 })
 export class ImpressumComponent {
 
-  churchName: string = 'El Bethel Assemblies of God e.V Dortmund';
-  legalForm: string = 'Körperschaft des öffentlichen Rechts (KdöR)';
+  // Basic Information
+  churchName: string = 'El Bethel Assemblies of God e.V. Dortmund';
+  legalForm: string = 'Eingetragener Verein (e.V.)';
+  registerInfo: string = 'Vereinsregister Dortmund, VR [add your number if available]';
   address: string = 'Hannöversche Str. 22A, 44143 Dortmund';
-  phone1: string = '+49 1775650008';
-  phone2: string = '+49 1785302417';
 
+  // Contact Information
+  phone1: string = '+49 177 5650008';
   email: string = 'fredrick0@yahoo.com';
+  website: string = 'https://www.elbetheldortmund.de'; // Add your real domain if available
+
+  // Responsible Representatives
   authorizedRepresentative: string = 'Pastor Fredrick';
-  website: string = '';
+  contentResponsible: string = 'Pastor Fredrick';
 
 }

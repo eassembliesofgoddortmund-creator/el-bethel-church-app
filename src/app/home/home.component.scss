@@ -82,6 +82,103 @@ body {
   color: #eee;
 }
 
+.curved-card {
+  position: relative; /* required for absolute button positioning */
+  padding: 20px 15px; /* slightly reduced padding for compact look */
+  text-align: center;
+  background-color: white;
+  color: black;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+
+.curved-card:hover {
+  transform: translateY(-5px);
+}
+
+/* === Text Elements === */
+.curved-card .service-time,
+.curved-card .service-address,
+.curved-card .mission {
+  margin: 8px 0; /* small vertical spacing */
+  line-height: 1.0em; /* tighter line spacing */
+}
+
+.curved-card .service-time {
+  font-size: 1.0em;
+}
+
+.curved-card .service-address {
+  font-size: 1.0em;
+  color: #555; /* optional: slightly lighter color */
+}
+
+.curved-card .mission {
+  font-size: 1.0em;
+  font-weight: bold;
+
+  color: #333;
+}
+
+/* === Update Button === */
+.update-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px; /* width = height for perfect circle */
+  height: 40px;
+  border-radius: 50%; /* makes it a circle */
+  border: none;
+  background-color: #5d734b;
+  color: white;
+  font-size: 1.0em; /* controls icon size */
+  cursor: pointer;
+
+  display: flex; /* flex centers content */
+  align-items: center; /* vertical center */
+  justify-content: center; /* horizontal center */
+
+  padding: 0; /* remove extra spacing */
+  line-height: 1; /* ensures icon aligns */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+.update-btn:hover {
+  background-color: #4a5a38;
+}
+
+/* === Update Form === */
+.update-form {
+  margin-top: 10px; /* slightly tighter spacing */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.update-form input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 150px;
+}
+
+.update-form button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #5d734b;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update-form button:hover {
+  background-color: #4a5a38;
+}
+
+
 /* === ARROWS === */
 .arrows {
   position: absolute;
@@ -211,6 +308,8 @@ body {
   .des {
     font-size: 1em;
   }
+
+
 
   .thumbnail {
     bottom: 80px;
