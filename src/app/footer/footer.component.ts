@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {RouterLink, RouterModule} from '@angular/router';
 import {TranslatePipe} from '@ngx-translate/core';
+import {ChurchInfoService} from '../services/church-info.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,6 +9,20 @@ import {TranslatePipe} from '@ngx-translate/core';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
-export class FooterComponent {
+export class FooterComponent  implements OnInit {
+
+
+  serviceTime = '';
+  serviceAddress = '';
+
+  constructor(private churchInfoService: ChurchInfoService) {}
+
+  ngOnInit(): void {
+    this.churchInfoService.churchInfo$.subscribe(info => {
+      this.serviceTime = info.time;
+      this.serviceAddress = info.address;
+    });
+
+  }
 
 }

@@ -24,16 +24,16 @@
             <div class="curved-card">
               <button *ngIf="isLoggedIn" class="update-btn" (click)="toggleForm()">⟳</button> <!-- small round update button -->
               <!-- Bind the service time dynamically -->
-              <p class="service-time">Sunday Church Services: {{ serviceTime }}</p>
+              <p class="service-time">Sunday Church Service: {{ serviceTime }}</p>
               <p class="service-address">{{ serviceAddress }}</p>
-              <p class="mission">To reach the nations and make disciples</p>
+              <p class="mission">Love God. Love People. Making Disciples.</p>
 
               <!-- Update form (hidden by default) -->
               <form class="update-form" *ngIf="showForm" (ngSubmit)="updateTime()">
                 <input type="text" [(ngModel)]="newTime" name="time" placeholder="Enter new time" required />
                 <input type="text" [(ngModel)]="serviceAddress" name="serviceAddress" placeholder="Enter new address" required />
 
-                <button type="submit">Update</button>
+                <button style="background-color: #0f1f54" type="submit">Update</button>
               </form>
             </div>
 
@@ -100,21 +100,23 @@
             <p>
               {{'about.schedule.main-church-service.time' | translate}}
               <br>
-              {{'about.schedule.main-church-service.location' | translate}}
+              {{serviceAddress}}
             </p>
           </li>
           <li>
             <h3>      {{'about.schedule.bible-studies.title' | translate}}</h3>
             <p>
               {{'about.schedule.bible-studies.time' | translate}} <br>
-              {{'about.schedule.bible-studies.location' | translate}}
+              {{serviceAddress}}
             </p>
           </li>
           <li>
             <h3>  {{'about.schedule.prayer-meeting.title' | translate}}</h3>
             <p>
-              {{'about.schedule.prayer-meeting.time' | translate}}<br>
-              {{'about.schedule.prayer-meeting.location' | translate}}
+              {{'about.schedule.prayer-meeting.time' | translate}}
+
+              <br>
+              {{serviceAddress}}
             </p>
           </li>
         </ul> <!-- end about-sched-->
@@ -146,8 +148,9 @@
       </p>
       <ul class="events-list__meta">
         <li class="events-list__meta-date">    {{'events.sunday-worship.meta.date' |translate}}</li>
-        <li class="events-list__meta-time">{{'events.sunday-worship.meta.time' |translate}}</li>
-        <li class="events-list__meta-location">{{'events.sunday-worship.meta.location' |translate}}</li>
+        <li class="events-list__meta-time">{{serviceTime}}</li>
+        <li class="events-list__meta-location">              {{serviceAddress}}
+        </li>
       </ul>
     </div> <!-- end events-list__item -->
     <div class="column events-list__item">
@@ -160,7 +163,8 @@
       <ul class="events-list__meta">
         <li class="events-list__meta-date">  {{'events.prayer-service.meta.date' |translate}}</li>
         <li class="events-list__meta-time">  {{'events.prayer-service.meta.time' |translate}}</li>
-        <li class="events-list__meta-location">  {{'events.prayer-service.meta.location' |translate}}</li>
+        <li class="events-list__meta-location">                {{serviceAddress}}
+        </li>
       </ul>
     </div> <!-- end events-list__item -->
     <div class="column events-list__item">
@@ -173,7 +177,8 @@
       <ul class="events-list__meta">
         <li class="events-list__meta-date">{{'events.bible-studies.meta.date' |translate}}</li>
         <li class="events-list__meta-time">{{'events.bible-studies.meta.time' |translate}}</li>
-        <li class="events-list__meta-location">{{'events.bible-studies.meta.location' |translate}}</li>
+        <li class="events-list__meta-location">              {{serviceAddress}}
+        </li>
       </ul>
     </div> <!-- end events-list__item -->
     <div class="column events-list__item">
@@ -188,7 +193,7 @@
         </li>
         <li class="events-list__meta-time">        {{'events.midnight-service.meta.time' |translate}}
         </li>
-        <li class="events-list__meta-location">        {{'events.midnight-service.meta.location' |translate}}
+        <li class="events-list__meta-location">       {{serviceAddress}}
         </li>
       </ul>
     </div> <!-- end events-list__item -->

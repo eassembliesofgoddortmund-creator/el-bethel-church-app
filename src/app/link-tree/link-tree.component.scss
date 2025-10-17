@@ -55,3 +55,68 @@
 .linktree-button:hover {
   background-color: #1b3487;
 }
+
+
+/* Responsive Design for Mobile Phones */
+@media (max-width: 768px) {
+  .linktree-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .linktree-img {
+    width: 120px;
+    height: 120px;
+    margin-left: 0;
+  }
+
+  .linktree-content {
+    padding: 0;
+  }
+
+  .linktree-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .linktree-content p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+
+  .linktree-button {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Devices (under 480px) */
+@media (max-width: 480px) {
+  .linktree-card {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .linktree-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .linktree-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .linktree-content p {
+    font-size: 0.9rem;
+  }
+
+  .linktree-button {
+    font-size: 0.9rem;
+    padding: 8px 0;
+  }
+}

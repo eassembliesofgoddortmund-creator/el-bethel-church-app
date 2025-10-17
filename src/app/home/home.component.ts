@@ -26,6 +26,7 @@ import {
 } from '@angular/fire/firestore';
 import {FreeConferenceCallComponent} from '../free-conference-call/free-conference-call.component';
 import {LinkTreeComponent} from '../link-tree/link-tree.component';
+import {ChurchInfoService} from '../services/church-info.service';
 @Component({
   selector: 'app-home',
   standalone:true,
@@ -77,7 +78,7 @@ export class HomeComponent implements OnInit{
   showPreloader = false;
   showForm = false;
   newTime = '';
-  serviceTime = '11:30 AM';
+  serviceTime = '10:00 AM';
   // **New dynamic fields**
   serviceAddress = 'Hannöversche Str. 22A, 44143 Dortmund';
 
@@ -85,7 +86,7 @@ export class HomeComponent implements OnInit{
   currentIndex = 0;
   youtubeLink =""
   facebookLink = "https://www.facebook.com/p/Dortmund-Assemblies-100071161759271/";
-  instagramLink ="https://www.instagram.com/Dortmund%20Assemblies"
+  instagramLink ="https://www.instagram.com/assembliesofgoddortmund"
   emailLink ="";
   name = "Angular " + VERSION.major;
   settings = {
@@ -97,16 +98,9 @@ export class HomeComponent implements OnInit{
     console.log(index, prevIndex);
   };
 
-
-
-
   toggleForm() {
     this.showForm = !this.showForm;
   }
-
-
-
-
 
   slides = [
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Jeremiah 3:15 – “Then I will give you shepherds after my own heart, who will lead you with knowledge and understanding.”', img: '/pastor_family.jpeg' },
@@ -120,6 +114,8 @@ export class HomeComponent implements OnInit{
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Hebrews 13:16 – “Do not forget to do good and to share with others, for with such sacrifices God is pleased.”', img: '/bethel_10.jpg' },
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: '1 Peter 4:10 – “Each of you should use whatever gift you have received to serve others, as faithful stewards of God’s grace.”', img: '/bethel_11.jpg' },
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Ephesians 4:3 – “Make every effort to keep the unity of the Spirit through the bond of peace.”', img: '/bethel_16.jpeg' },
+    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Psalm 68:11 (ESV)- “The Lord gives the word; the women who announce the news are a great host.', img: '/bethel_30.jpeg' },
+
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Colossians 3:23–24 (NIV) - "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters, since you know that you will receive an inheritance from the Lord as a reward. It is the Lord Christ you are serving.', img: '/bethel_14.jpeg' },
 
 
@@ -140,7 +136,8 @@ export class HomeComponent implements OnInit{
     private languageService: LanguageService,        // Inject the service
     private authService:AuthService,
     private router: Router,  // ✅ inject router
-    private fireStore: Firestore  // 🔑 inject Firestore
+    private fireStore: Firestore , // 🔑 inject Firestore
+    private churchInfoService: ChurchInfoService // ✅ inject
 
   ) {}
 
@@ -191,6 +188,10 @@ export class HomeComponent implements OnInit{
         const data = docSnap.data();
         this.serviceTime = data['time'] || this.serviceTime;
         this.serviceAddress = data['address'] || this.serviceAddress;
+
+        // ✅ Update shared service
+        this.churchInfoService.updateChurchInfo(this.serviceTime, this.serviceAddress);
+
         this.cdr.detectChanges(); // Update UI
       } else {
         console.log('No church timing document found.');
@@ -211,8 +212,9 @@ export class HomeComponent implements OnInit{
           time: this.serviceTime,
           address: this.serviceAddress
         });
-        console.log('Service time and address updated in Firestore');
 
+        this.churchInfoService.updateChurchInfo(this.serviceTime, this.serviceAddress);
+        console.log('Service time and address updated in Firestore');
         // Immediately reload the values for UI
         await this.loadServiceTimeAndAddress();
       } catch (error) {
