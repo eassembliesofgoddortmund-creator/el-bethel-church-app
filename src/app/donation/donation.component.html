@@ -46,6 +46,28 @@
             on the outside and put it in the collection.
           </p>
         </mat-expansion-panel>
+
+
+        <!-- Panel 3: Link Tree -->
+
+        <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+          <mat-expansion-panel-header>
+            <mat-panel-title>2. PayPal (via Linktree)</mat-panel-title>
+            <mat-icon class="expand-icon">
+              {{ panelOpenState() ? 'expand_less' : 'expand_more' }}
+            </mat-icon>
+          </mat-expansion-panel-header>
+
+          <p>You can also give your tithes and offerings conveniently online through PayPal using our Linktree page.</p>
+          <p class="justify-text">
+            Simply click the button below to access our Linktree and select the PayPal option to complete your giving securely.<br><br>
+            <a href={{linktreeUrl}} target="_blank" rel="noopener" class="linktree-button">
+              Give via PayPal
+            </a>
+          </p>
+
+        </mat-expansion-panel>
+
       </mat-accordion>
 
 

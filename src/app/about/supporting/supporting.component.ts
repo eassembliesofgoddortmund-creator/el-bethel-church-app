@@ -13,6 +13,8 @@ import { MatIconModule} from '@angular/material/icon';
 })
 export class SupportingComponent {
 
+  linktreeUrl: string = 'https://linktr.ee/elbethelag';
+
   readonly panelOpenState = signal(false);
  // bankdetails = environment.bankDetails;
 

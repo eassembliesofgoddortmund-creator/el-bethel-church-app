@@ -28,5 +28,6 @@ export class DonationComponent {
   instagramLink ="https://www.instagram.com/Dortmund%20Assemblies"
   emailLink ="";
 
+  linktreeUrl: string = 'https://linktr.ee/elbethelag';
 
 }
