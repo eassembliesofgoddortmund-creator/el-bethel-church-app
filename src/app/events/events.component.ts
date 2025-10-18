@@ -25,7 +25,7 @@ export class EventsComponent implements  OnInit{
 
   youtubeLink =""
   facebookLink = "https://www.facebook.com/p/Dortmund-Assemblies-100071161759271/";
-  instagramLink ="https://www.instagram.com/Dortmund%20Assemblies"
+  instagramLink ="https://www.instagram.com/assembliesofgoddortmund"
   emailLink ="";
 
   events: Event[] = [
