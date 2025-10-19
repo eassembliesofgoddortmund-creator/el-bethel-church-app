@@ -3,7 +3,9 @@ import {BehaviorSubject} from 'rxjs';
 
 
 interface ChurchInfo {
-  time: string;
+  englishServiceTime: string;
+  twiServiceTime: string;
+  sundaySchoolServiceTime: string;
   address: string;
 }
 @Injectable({
@@ -11,7 +13,9 @@ interface ChurchInfo {
 })
 export class ChurchInfoService {
   private churchInfoSubject = new BehaviorSubject<ChurchInfo>({
-    time: '10:00 AM',
+    englishServiceTime: '10:00 AM',
+    twiServiceTime: '2:00 PM',
+    sundaySchoolServiceTime: '11:30 AM',
     address: 'Hannöversche Str. 22A, 44143 Dortmund'
   });
 
@@ -22,8 +26,19 @@ export class ChurchInfoService {
   churchInfo$ = this.churchInfoSubject.asObservable();
 
   // Method to update info
-  updateChurchInfo(time: string, address: string) {
-    this.churchInfoSubject.next({ time, address });
+  // ✅ Update all fields dynamically
+  updateChurchInfo(
+    englishServiceTime: string,
+    twiServiceTime: string,
+    sundaySchoolServiceTime: string,
+    address: string
+  ) {
+    this.churchInfoSubject.next({
+      englishServiceTime,
+      twiServiceTime,
+      sundaySchoolServiceTime,
+      address
+    });
   }
 
   // Optional getters for quick access

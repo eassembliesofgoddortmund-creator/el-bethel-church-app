@@ -9,6 +9,8 @@ import {ChurchStaffComponent} from './church-staff/church-staff.component';
 import {SupportingComponent} from './supporting/supporting.component';
 import {GalleryComponent} from './gallery/gallery.component';
 import {PurposeAndMissionComponent} from './purpose-and-mission/purpose-and-mission.component';
+import {AddChurchStaffComponent} from './add-church-staff/add-church-staff.component';
+import {AuthGuard} from '../auth.guard';
 
 export const ABOUT_ROUTES: Routes = [
   {
@@ -20,6 +22,7 @@ export const ABOUT_ROUTES: Routes = [
       { path: 'faith-statement', component: FaithStatementComponent },
       { path: 'history', component: HistoryComponent },
       { path: 'church-staff', component: ChurchStaffComponent },
+      { path: 'add-church-staff', component: AddChurchStaffComponent, canActivate: [AuthGuard] },
       { path: 'supporting', component: SupportingComponent },
       {path:'gallery', component:  GalleryComponent},
       {path:'purpose-and-mission',component:PurposeAndMissionComponent}

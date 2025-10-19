@@ -24,17 +24,28 @@
             <div class="curved-card">
               <button *ngIf="isLoggedIn" class="update-btn" (click)="toggleForm()">⟳</button> <!-- small round update button -->
               <!-- Bind the service time dynamically -->
-              <p class="service-time">Sunday Church Service: {{ serviceTime }}</p>
+              <p class="service-time">Sunday English Church Service : {{ serviceTime }}</p>
+              <p class="service-time">Sunday School Bible Studies : {{sundaySchoolServiceTime}}</p>
+              <p class="service-time">Sunday Twi Church Service : {{ twiServiceTime }}</p>
               <p class="service-address">{{ serviceAddress }}</p>
               <p class="mission">Love God. Love People. Making Disciples.</p>
 
               <!-- Update form (hidden by default) -->
               <form class="update-form" *ngIf="showForm" (ngSubmit)="updateTime()">
-                <input type="text" [(ngModel)]="newTime" name="time" placeholder="Enter new time" required />
-                <input type="text" [(ngModel)]="serviceAddress" name="serviceAddress" placeholder="Enter new address" required />
+                <div class="input-row">
+                  <input type="text" [(ngModel)]="serviceTime" name="time" placeholder="Enter new English service time" required />
+                  <input type="text" [(ngModel)]="sundaySchoolServiceTime" name="sundaySchoolServiceTime" placeholder="Enter Sunday School time" required />
 
-                <button style="background-color: #0f1f54" type="submit">Update</button>
+                </div>
+
+                <div class="input-row">
+                  <input type="text" [(ngModel)]="twiServiceTime" name="twiServiceTime" placeholder="Enter Twi service time" required />
+                  <input type="text" [(ngModel)]="serviceAddress" name="serviceAddress" placeholder="Enter new address" required />
+                </div>
+
+                <button type="submit">Update</button>
               </form>
+
             </div>
 
           </div>

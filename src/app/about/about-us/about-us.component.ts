@@ -17,7 +17,7 @@ export class AboutUsComponent implements OnInit  {
 
   ngOnInit(): void {
     this.churchInfoService.churchInfo$.subscribe(info => {
-      this.serviceTime = info.time;
+      this.serviceTime = info.englishServiceTime;
       this.serviceAddress = info.address;
     });
 

@@ -153,23 +153,28 @@ body {
 
 /* === Update Form === */
 .update-form {
-  margin-top: 10px; /* slightly tighter spacing */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.input-row {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .update-form input {
   padding: 5px 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 150px;
 }
 
 .update-form button {
-  padding: 5px 10px;
+  padding: 8px 16px;
   border: none;
-  background-color: #5d734b;
+  background-color: #0f1f54;
   color: white;
   border-radius: 5px;
   cursor: pointer;

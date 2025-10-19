@@ -32,11 +32,10 @@
           <li><a routerLink="/about/faith-statement">{{'about.faith-statement'| translate }}</a></li>
           <li><a routerLink="/about/purpose-and-mission">{{'about.our-mission'| translate}}</a></li>
           <li><a routerLink="/about/history">{{'about.history'| translate}}</a></li>
-          <li><a routerLink="/about/church-staff">{{'about.church-staff'| translate}}</a></li>
-            <li><a routerLink="/about/supporting">{{'about.supporting'| translate}}</a></li>
+          <li><a  routerLink="/about/church-staff">{{'about.church-staff'| translate}}</a></li>
+          <li *ngIf="isLoggedIn"  ><a routerLink="/about/add-church-staff">{{'about.add-church-staff'| translate}}</a></li>
+          <li><a routerLink="/about/supporting">{{'about.supporting'| translate}}</a></li>
           <li><a routerLink="/about/gallery">{{'about.gallery'| translate}}</a></li>
-
-
         </ul>
       </li>
 

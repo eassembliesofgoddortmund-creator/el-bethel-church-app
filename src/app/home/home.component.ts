@@ -79,6 +79,8 @@ export class HomeComponent implements OnInit{
   showForm = false;
   newTime = '';
   serviceTime = '10:00 AM';
+  sundaySchoolServiceTime ='11:30 AM'
+  twiServiceTime = "2:00 PM";
   // **New dynamic fields**
   serviceAddress = 'Hannöversche Str. 22A, 44143 Dortmund';
 
@@ -111,12 +113,24 @@ export class HomeComponent implements OnInit{
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: '1 John 3:18 (NIV) - "Dear children, let us not love with words or speech but with actions and in truth."', img: '/music_team.jpg' },
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Matthew 22:37–39 – Jesus said to him, You shall love the Lord your God with all your heart, with all your soul, and with all your mind. This is the first and great commandment. And the second is like it: You shall love your neighbor as yourself."', img: '/bethel_10.jpg' },
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'John 13:34–35 - "A new commandment I give to you, that you love one another; as I have loved you, that you also love one another. By this all will know that you are My disciples, if you have love for one another."', img: '/bethel_6.jpg' },
-    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Hebrews 13:16 – “Do not forget to do good and to share with others, for with such sacrifices God is pleased.”', img: '/bethel_10.jpg' },
+    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Hebrews 13:16 – “Do not forget to do good and to share with others, for with such sacrifices God is pleased.”', img: '/bethel_37.JPG' },
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: '1 Peter 4:10 – “Each of you should use whatever gift you have received to serve others, as faithful stewards of God’s grace.”', img: '/bethel_11.jpg' },
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Ephesians 4:3 – “Make every effort to keep the unity of the Spirit through the bond of peace.”', img: '/bethel_16.jpeg' },
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Psalm 68:11 (ESV)- “The Lord gives the word; the women who announce the news are a great host.', img: '/bethel_30.jpeg' },
-
     { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund', des: 'Colossians 3:23–24 (NIV) - "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters, since you know that you will receive an inheritance from the Lord as a reward. It is the Lord Christ you are serving.', img: '/bethel_14.jpeg' },
+    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund',
+      des: 'Romans 12:11–12 – “Never be lacking in zeal, but keep your spiritual fervor, serving the Lord. Be joyful in hope, patient in affliction, faithful in prayer.”',
+      img: '/bethel_31.JPG' },
+
+    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund',
+      des: 'John 14:15 – “If you love Me, keep My commands.”',
+      img: '/bethel_33.JPG' },
+    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund',
+      des: 'Matthew 7:11 – “If you, then, though you are evil, know how to give good gifts to your children, how much more will your Father in heaven give good things to those who ask Him!”',
+      img: '/bethel_34.JPG' },
+    { author: 'Welcome to', title: 'El Bethel', topic: 'Assemblies of God, Dortmund',
+      des: 'James 1:22 – “Do not merely listen to the word, and so deceive yourselves. Do what it says.”',
+      img: '/bethel_35.JPG' },
 
 
 
@@ -186,11 +200,17 @@ export class HomeComponent implements OnInit{
 
       if (docSnap.exists()) {
         const data = docSnap.data();
-        this.serviceTime = data['time'] || this.serviceTime;
+        // ✅ Load all fields safely
+        this.serviceTime = data['englishServiceTime'] || this.serviceTime;
+        this.twiServiceTime = data['twiServiceTime'] || this.twiServiceTime;
+        this.sundaySchoolServiceTime = data['sundaySchoolServiceTime'] || this.sundaySchoolServiceTime;
         this.serviceAddress = data['address'] || this.serviceAddress;
 
         // ✅ Update shared service
-        this.churchInfoService.updateChurchInfo(this.serviceTime, this.serviceAddress);
+        this.churchInfoService.updateChurchInfo(  this.serviceTime,
+          this.twiServiceTime,
+          this.sundaySchoolServiceTime,
+          this.serviceAddress);
 
         this.cdr.detectChanges(); // Update UI
       } else {
@@ -202,26 +222,40 @@ export class HomeComponent implements OnInit{
   }
 
   async updateTime() {
-    if (this.newTime.trim() && this.serviceAddress.trim()) {
-      this.serviceTime = this.newTime;
-      this.showForm = false;
-
+    if (
+      this.serviceTime.trim() &&
+      this.twiServiceTime.trim() &&
+      this.sundaySchoolServiceTime.trim() &&
+      this.serviceAddress.trim()
+    ) {
       try {
         const docRef = doc(this.fireStore, 'churchTimingAddress', 'main');
         await setDoc(docRef, {
-          time: this.serviceTime,
+          englishServiceTime: this.serviceTime,
+          twiServiceTime: this.twiServiceTime,
+          sundaySchoolServiceTime: this.sundaySchoolServiceTime,
           address: this.serviceAddress
         });
 
-        this.churchInfoService.updateChurchInfo(this.serviceTime, this.serviceAddress);
-        console.log('Service time and address updated in Firestore');
-        // Immediately reload the values for UI
-        await this.loadServiceTimeAndAddress();
+        // ✅ Update shared info
+        this.churchInfoService.updateChurchInfo(
+          this.serviceTime,
+          this.twiServiceTime,
+          this.sundaySchoolServiceTime,
+          this.serviceAddress
+        );
+
+        console.log('All service times and address updated in Firestore');
+        alert('Service times updated successfully!');
+
+
+        this.showForm = false; // close the form
+        await this.loadServiceTimeAndAddress(); // refresh UI
       } catch (error) {
         console.error('Error updating service info:', error);
       }
-
-      this.newTime = '';
+    } else {
+      console.warn('Please fill in all required fields.');
     }
   }
 
