@@ -11,6 +11,7 @@ import {GalleryComponent} from './gallery/gallery.component';
 import {PurposeAndMissionComponent} from './purpose-and-mission/purpose-and-mission.component';
 import {AddChurchStaffComponent} from './add-church-staff/add-church-staff.component';
 import {AuthGuard} from '../auth.guard';
+import {ChurchInfoComponent} from './church-info/church-info.component';
 
 export const ABOUT_ROUTES: Routes = [
   {
@@ -25,7 +26,9 @@ export const ABOUT_ROUTES: Routes = [
       { path: 'add-church-staff', component: AddChurchStaffComponent, canActivate: [AuthGuard] },
       { path: 'supporting', component: SupportingComponent },
       {path:'gallery', component:  GalleryComponent},
-      {path:'purpose-and-mission',component:PurposeAndMissionComponent}
+      {path:'purpose-and-mission',component:PurposeAndMissionComponent},
+      { path: 'church-info', component: ChurchInfoComponent,  canActivate: [AuthGuard]}
+
     ]
   }
 ];

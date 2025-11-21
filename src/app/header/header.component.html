@@ -36,6 +36,8 @@
           <li *ngIf="isLoggedIn"  ><a routerLink="/about/add-church-staff">{{'about.add-church-staff'| translate}}</a></li>
           <li><a routerLink="/about/supporting">{{'about.supporting'| translate}}</a></li>
           <li><a routerLink="/about/gallery">{{'about.gallery'| translate}}</a></li>
+          <li *ngIf="isLoggedIn" ><a routerLink="/about/church-info">{{'about.church-info'| translate}}</a></li>
+
         </ul>
       </li>
 
@@ -53,7 +55,7 @@
           <li><a routerLink="/connect/prayer-meetings">{{'connect.prayer-meetings'| translate}}</a></li>
           <li><a routerLink="/connect/service-teams">{{'connect.service-teams'| translate}}</a></li>
           <li><a routerLink="/connect/premarital-counselling">{{'connect.premarital-counselling'| translate}}</a></li>
-          <li><a routerLink="/connect/marriage-restoration">{{'connect.marriage-restoration'| translate}}</a></li>
+<!--          <li><a routerLink="/connect/marriage-restoration">{{'connect.marriage-restoration'| translate}}</a></li>-->
           <li><a routerLink="/connect/marriage-and-family">{{'connect.marriage-and-family'| translate}}</a></li>
 
         </ul>

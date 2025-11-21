@@ -25,29 +25,10 @@
     </p>
   </mat-expansion-panel>
 
-  <!-- Panel 2: Direct Deposit -->
-<!--  <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">-->
-<!--    <mat-expansion-panel-header>-->
-<!--      <mat-panel-title>2. Direct Deposit (Überweisung)</mat-panel-title>-->
-<!--      <mat-icon class="expand-icon">-->
-<!--        {{ panelOpenState() ? 'expand_less' : 'expand_more' }}-->
-<!--      </mat-icon>-->
-<!--    </mat-expansion-panel-header>-->
-
-<!--    <p>Make a direct deposit to the church account:</p>-->
-<!--    <ul>-->
-<!--      <li><strong>Receiver:</strong> {{bankdetails.accountHolder}}</li>-->
-<!--      <li><strong>IBAN:</strong> {{bankdetails.iban}}</li>-->
-<!--      <li><strong>Bank:</strong> {{bankdetails.bankName}}</li>-->
-<!--      <li><strong>BIC:</strong> {{bankdetails.bic}}</li>-->
-
-<!--    </ul>-->
-<!--    <p><strong>Note:</strong> Include your full name and address to receive a German tax statement.</p>-->
-<!--  </mat-expansion-panel>-->
 
 
 
-  <!-- Panel 3: Link Tree -->
+  <!-- Panel 2: Link Tree -->
 
   <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
     <mat-expansion-panel-header>
@@ -65,10 +46,38 @@
       </a>
     </p>
 
+
+</mat-expansion-panel>
+
+
+  <!-- Panel 3: Online Donation -->
+  <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+    <mat-expansion-panel-header>
+      <mat-panel-title>3. Online Donation</mat-panel-title>
+      <mat-icon class="expand-icon">
+        {{ panelOpenState() ? 'expand_less' : 'expand_more' }}
+      </mat-icon>
+    </mat-expansion-panel-header>
+
+    <p>You can donate online using the following bank details:</p>
+
+    <div *ngIf="bankDetailsImage; else loading">
+      <img
+        [src]="bankDetailsImage"
+        alt="Bank Details"
+        style="max-width: 100%; cursor: pointer; border:1px solid #ccc; padding: 10px;"
+        (click)="openBankDetails()"
+      />
+    </div>
+    <ng-template #loading>
+      <p>Loading bank details...</p>
+    </ng-template>
+
+
   </mat-expansion-panel>
 
 
-<p class="welcome-text">
+  <p class="welcome-text">
  <b> If you have any questions, please contact our treasurer at <a href="mailto:eassembliesofgoddortmund@gmail.com"> eassembliesofgoddortmund&#64;gmail.com</a></b>
 </p>
 

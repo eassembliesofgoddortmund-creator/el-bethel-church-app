@@ -104,30 +104,30 @@
         <a (click)="togglePreloader()"  class="btn btn--primary btn--about">{{'about.welcome.button' | translate}}</a>
       </div>
 
-      <div class="column large-half medium-full">
+      <div class="column large-half medium-full" *ngIf="churchInfo$ | async as info">
         <ul class="about-sched">
           <li>
             <h3>{{'about.schedule.main-church-service.title' | translate}} </h3>
             <p>
-              {{'about.schedule.main-church-service.time' | translate}}
+            Every Sunday - {{info.englishServiceTime}}
               <br>
-              {{serviceAddress}}
+              {{info.address}}
             </p>
           </li>
           <li>
             <h3>      {{'about.schedule.bible-studies.title' | translate}}</h3>
             <p>
-              {{'about.schedule.bible-studies.time' | translate}} <br>
-              {{serviceAddress}}
+            Every Wednesday - {{info.bibleStudiesTime}} <br>
+              {{info.bibleStudiesAddress}}
             </p>
           </li>
           <li>
             <h3>  {{'about.schedule.prayer-meeting.title' | translate}}</h3>
             <p>
-              {{'about.schedule.prayer-meeting.time' | translate}}
+             Every Friday- {{info.prayerMeetingTime}}
 
               <br>
-              {{serviceAddress}}
+              {{info.prayerMeetingAddress}}
             </p>
           </li>
         </ul> <!-- end about-sched-->
@@ -140,7 +140,7 @@
 
 
 
-<section class="s-events">
+<section class="s-events" *ngIf="churchInfo$ | async as info">
 
   <div class="row events-header">
     <div class="column">
@@ -159,8 +159,8 @@
       </p>
       <ul class="events-list__meta">
         <li class="events-list__meta-date">    {{'events.sunday-worship.meta.date' |translate}}</li>
-        <li class="events-list__meta-time">{{serviceTime}}</li>
-        <li class="events-list__meta-location">              {{serviceAddress}}
+        <li class="events-list__meta-time">{{info.englishServiceTime}}</li>
+        <li class="events-list__meta-location"> {{info.address }}
         </li>
       </ul>
     </div> <!-- end events-list__item -->
@@ -187,8 +187,8 @@
       </p>
       <ul class="events-list__meta">
         <li class="events-list__meta-date">{{'events.bible-studies.meta.date' |translate}}</li>
-        <li class="events-list__meta-time">{{'events.bible-studies.meta.time' |translate}}</li>
-        <li class="events-list__meta-location">              {{serviceAddress}}
+        <li class="events-list__meta-time">{{info.bibleStudiesTime}}</li>
+        <li class="events-list__meta-location">    {{info.bibleStudiesAddress}}
         </li>
       </ul>
     </div> <!-- end events-list__item -->
@@ -200,11 +200,11 @@
         {{'events.midnight-service.description' |translate}}
       </p>
       <ul class="events-list__meta">
-        <li class="events-list__meta-date">        {{'events.midnight-service.meta.date' |translate}}
+        <li class="events-list__meta-date">        {{info.midnightServiceDay}}
         </li>
-        <li class="events-list__meta-time">        {{'events.midnight-service.meta.time' |translate}}
+        <li class="events-list__meta-time">        {{info.midnightServiceTime}}
         </li>
-        <li class="events-list__meta-location">       {{serviceAddress}}
+        <li class="events-list__meta-location">       {{info.midnightServiceAddress}}
         </li>
       </ul>
     </div> <!-- end events-list__item -->

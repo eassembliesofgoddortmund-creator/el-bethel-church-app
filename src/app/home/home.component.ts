@@ -3,7 +3,7 @@ import {Router, RouterLink} from '@angular/router';
 import {TranslateModule, TranslateService} from '@ngx-translate/core';
 import { ChangeDetectorRef } from '@angular/core';
 import {LanguageService} from '../services/language.service';
-import {Subscription} from 'rxjs';
+import {Observable, Subscription} from 'rxjs';
 import {  VERSION } from "@angular/core";
 import lgZoom from 'lightgallery/plugins/zoom';
 import { BeforeSlideDetail } from 'lightgallery/lg-events';
@@ -27,6 +27,7 @@ import {
 import {FreeConferenceCallComponent} from '../free-conference-call/free-conference-call.component';
 import {LinkTreeComponent} from '../link-tree/link-tree.component';
 import {ChurchInfoService} from '../services/church-info.service';
+import {ChurchInfo, ChurchInformationService} from '../services/church-information.service';
 @Component({
   selector: 'app-home',
   standalone:true,
@@ -138,8 +139,7 @@ export class HomeComponent implements OnInit{
 
   ];
 
-
-
+  churchInfo$!: Observable<ChurchInfo>;
 
 
   lang = '';
@@ -151,7 +151,8 @@ export class HomeComponent implements OnInit{
     private authService:AuthService,
     private router: Router,  // ✅ inject router
     private fireStore: Firestore , // 🔑 inject Firestore
-    private churchInfoService: ChurchInfoService // ✅ inject
+    private churchInfoService: ChurchInfoService, // ✅ inject
+    private churchInfoNewService: ChurchInformationService
 
   ) {}
 
@@ -171,6 +172,9 @@ export class HomeComponent implements OnInit{
     });
 
     this.loadServiceTimeAndAddress();
+
+    this.churchInfo$ = this.churchInfoNewService.churchInfo$; // 🔥 live observable from Firestore
+
   }
 
 

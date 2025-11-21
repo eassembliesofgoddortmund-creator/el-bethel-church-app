@@ -1,0 +1,102 @@
+<h3 class="church-title">Church Details</h3>
+
+<div class="church-container">
+  <!-- Left Column: Form -->
+  <div *ngIf="showUpdateForm" class="form-column update-form">
+    <h4>Update Church Info</h4>
+    <form (ngSubmit)="onUpdate()" #updateForm="ngForm">
+      <!-- Existing fields -->
+      <div class="form-group">
+        <label>Church Address</label>
+        <input type="text" name="address" [(ngModel)]="address" required />
+      </div>
+
+      <div class="form-group">
+        <label>English Service Time</label>
+        <input type="text" name="englishServiceTime" [(ngModel)]="englishServiceTime" required />
+      </div>
+      <div class="form-group">
+        <label>Twi Service Time</label>
+        <input type="text" name="twiServiceTime" [(ngModel)]="twiServiceTime" required />
+      </div>
+
+      <div class="form-group">
+        <label>Sunday School Time</label>
+        <input type="text" name="sundaySchoolServiceTime" [(ngModel)]="sundaySchoolServiceTime" required />
+      </div>
+
+      <!-- New Event Fields -->
+      <div class="form-group">
+        <label>Prayer Meeting Day</label>
+        <input type="text" name="prayerMeetingDay" [(ngModel)]="prayerMeetingDay" />
+      </div>
+      <div class="form-group">
+        <label>Prayer Meeting Time</label>
+        <input type="text" name="prayerMeetingTime" [(ngModel)]="prayerMeetingTime" />
+      </div>
+      <div class="form-group">
+        <label>Prayer Meeting Address</label>
+        <input type="text" name="prayerMeetingAddress" [(ngModel)]="prayerMeetingAddress" />
+      </div>
+
+      <div class="form-group">
+        <label>Bible Studies</label>
+        <input type="text" name="bibleStudies" [(ngModel)]="bibleStudies" />
+      </div>
+      <div class="form-group">
+        <label>Bible Studies Time</label>
+        <input type="text" name="bibleStudiesTime" [(ngModel)]="bibleStudiesTime" />
+      </div>
+      <div class="form-group">
+        <label>Bible Studies Address</label>
+        <input type="text" name="bibleStudiesAddress" [(ngModel)]="bibleStudiesAddress" />
+      </div>
+
+      <div class="form-group">
+        <label>Midnight Service Day</label>
+        <input type="text" name="midnightServiceDay" [(ngModel)]="midnightServiceDay" />
+      </div>
+      <div class="form-group">
+        <label>Midnight Service Time</label>
+        <input type="text" name="midnightServiceTime" [(ngModel)]="midnightServiceTime" />
+      </div>
+      <div class="form-group">
+        <label>Midnight Service Address</label>
+        <input type="text" name="midnightServiceAddress" [(ngModel)]="midnightServiceAddress" />
+      </div>
+
+      <div class="form-group">
+        <label>Prayer Service Day</label>
+        <input type="text" name="prayerServiceDay" [(ngModel)]="prayerServiceDay" />
+      </div>
+      <div class="form-group">
+        <label>Prayer Service Time</label>
+        <input type="text" name="prayerServiceTime" [(ngModel)]="prayerServiceTime" />
+      </div>
+      <div class="form-group">
+        <label>Prayer Service Address</label>
+        <input type="text" name="prayerServiceAddress" [(ngModel)]="prayerServiceAddress" />
+      </div>
+
+      <button type="submit" class="save-btn">Save Changes</button>
+    </form>
+  </div>
+
+  <!-- Right Column: Church Info -->
+  <div class="info-column church-info">
+    <div *ngIf="currentInfo$ | async as info" class="info-display">
+      <p><strong>Address:</strong> {{ info.address }}</p>
+      <p><strong>English Service:</strong> {{ info.englishServiceTime }}</p>
+      <p><strong>Twi Service:</strong> {{ info.twiServiceTime }}</p>
+      <p><strong>Sunday School:</strong> {{ info.sundaySchoolServiceTime }}</p>
+      <p><strong>Prayer Meeting:</strong> {{ info.prayerMeetingDay }} - {{ info.prayerMeetingTime }} at {{ info.prayerMeetingAddress }}</p>
+      <p><strong>Bible Studies:</strong> {{ info.bibleStudies }} - {{ info.bibleStudiesTime }} at {{ info.bibleStudiesAddress }}</p>
+      <p><strong>Midnight Service:</strong> {{ info.midnightServiceDay }} - {{ info.midnightServiceTime }} at {{ info.midnightServiceAddress }}</p>
+      <p><strong>Prayer Service:</strong> {{ info.prayerServiceDay }} - {{ info.prayerServiceTime }} at {{ info.prayerServiceAddress }}</p>
+    </div>
+
+    <button class="toggle-btn" (click)="toggleUpdateForm()">
+      {{ showUpdateForm ? 'Hide Update Form' : 'Update Church Info' }}
+    </button>
+  </div>
+</div>
