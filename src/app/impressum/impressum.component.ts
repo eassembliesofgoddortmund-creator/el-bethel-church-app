@@ -16,7 +16,7 @@ export class ImpressumComponent {
   address: string = 'Hannöversche Str. 22A, 44143 Dortmund';
 
   // Contact Information
-  phone1: string = '+49 177 5650008';
+  phone1: string = '+49 1785302417';
   email: string = 'eassembliesofgoddortmund@gmail.com';
   website: string = 'https://el-bethel-ag-international-dortmund.vercel.app/'; // Add your real domain if available
 
