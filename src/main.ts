@@ -13,12 +13,13 @@ import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
 import {getStorage, provideStorage} from '@angular/fire/storage';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDVneLGeDi1aQv3l14eTgEgOpgCw8_FEVs",
-  authDomain: "el-bethel-ag-church-new.firebaseapp.com",
-  projectId: "el-bethel-ag-church-new",
-  storageBucket: "el-bethel-ag-church-new.firebasestorage.app",
-  messagingSenderId: "207734713705",
-  appId: "1:207734713705:web:d1ab123bef19d5ab3fa1f8"
+ apiKey: "AIzaSyA1euTSeVOYBm00o3fikktGPJg4YXuuRqg",
+  authDomain: "el-bethel-dortmund.firebaseapp.com",
+  projectId: "el-bethel-dortmund",
+  storageBucket: "el-bethel-dortmund.firebasestorage.app",
+  messagingSenderId: "572883201724",
+  appId: "1:572883201724:web:970b27787f1f6a8e6e2ab9",
+  measurementId: "G-RS8NRE2GVV"
 };
 
 bootstrapApplication(AppComponent, {
@@ -40,12 +41,13 @@ bootstrapApplication(AppComponent, {
         imageSize: 'cover'
       } as GalleryConfig
     }, provideFirebaseApp(() => initializeApp({
-      apiKey: "AIzaSyDVneLGeDi1aQv3l14eTgEgOpgCw8_FEVs",
-      authDomain: "el-bethel-ag-church-new.firebaseapp.com",
-      projectId: "el-bethel-ag-church-new",
-      storageBucket: "el-bethel-ag-church-new.firebasestorage.app",
-      messagingSenderId: "207734713705",
-      appId: "1:207734713705:web:d1ab123bef19d5ab3fa1f8"
+ apiKey: "AIzaSyA1euTSeVOYBm00o3fikktGPJg4YXuuRqg",
+  authDomain: "el-bethel-dortmund.firebaseapp.com",
+  projectId: "el-bethel-dortmund",
+  storageBucket: "el-bethel-dortmund.firebasestorage.app",
+  messagingSenderId: "572883201724",
+  appId: "1:572883201724:web:970b27787f1f6a8e6e2ab9",
+  measurementId: "G-RS8NRE2GVV"
     })), provideAuth(() => getAuth()), provideFirestore(() => getFirestore())
   ]
 }).catch(err => console.error(err));
